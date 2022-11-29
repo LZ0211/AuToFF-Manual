@@ -1,2 +1,2 @@
 # AuToFF Manual
-Documentation of $\color{#FF3030}{Au}$xiliary $\color{#FF3030}{To}$ols of $\color{#FF3030}{F}$orce $\color{#FF3030}{F}$ield
+Documentation of <font color=red><strong>Au</strong></font>xiliary <font color=red><strong>To</strong></font>ols of <font color=red><strong>F</strong></font>orce <font color=red><strong>F</strong></font>ield
