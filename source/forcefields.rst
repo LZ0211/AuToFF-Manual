@@ -10,3 +10,8 @@
  * 交叉能量项：上述作用之间耦合引起的能量变化
 
  不同的分子力场会选取不同的函数形式来描述上述能量与体系构型之间的关系。
+
+ GAFF:
+.. math::
+    E_pair = \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{amgles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1+cos(n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^12} - \frac{B_{ij}}{R_{ij}^6} + \frac{q_{i}q_{j}}{\varepsilonR_{ij}}]
+
