@@ -12,9 +12,7 @@ AuToFF 用户手册
    :maxdepth: 4
    :caption: 用户指导
 
-   MD theory
-   forcefields
-   MD software
+   MD
    User Guide
    
    FQA
