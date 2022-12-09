@@ -2,11 +2,11 @@
 ************************************
 本章将介绍分子动力学相关知识。
 
-.. include:: MD theory.rst
+.. include:: MD/MD-theory.rst
 
-.. include:: forcefields.rst
+.. include:: MD/forcefields.rst
 
-.. include:: MD software.rst
+.. include:: MD/MD-software.rst
 
 
    
