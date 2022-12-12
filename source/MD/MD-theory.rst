@@ -83,8 +83,8 @@ MD模拟的积分算法
 (1)  Verlet算法：利用Taylor展开粒子的位置坐标，
 
 .. math::
-  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{1}/{2}) a(t)\delta{t^2}	//							    
-  & r(t-\delta t)=r(t)-v(t)\delta t+(\frac{1}/{2}) a(t)\delta{t^2}									    
+  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{1}{2}) a(t)\delta{t^2}	\\							    
+  & r(t-\delta t)=r(t)-v(t)\delta t+(\frac{1}{2}) a(t)\delta{t^2}									    
 
 上述两式相加得到Verlet算法的基本公式，
 
@@ -93,31 +93,31 @@ MD模拟的积分算法
 
 利用Verlet算法计算 :math:`t+\delta t` 时刻的粒子位置，需要t时刻的粒子位置和加速度、以及 :math:`t-\delta t` 时刻的粒子位置。该算法计算简单，不直接计算粒子的速度，但算法精度不高。
 
-(2)  Leap-frog算法：首先计算 :math:`t+(\frac{1}/{2}) \delta t` 时刻的粒子速度，
+(2)  Leap-frog算法：首先计算 :math:`t+(\frac{1}{2}) \delta t` 时刻的粒子速度，
 
 .. math::
-    v(t+(\frac{1}/{2}) \delta t)=v(t-(\frac{1}/{2}) \delta t)+a(t)\delta t										
+    v(t+(\frac{1}{2}) \delta t)=v(t-(\frac{1}{2}) \delta t)+a(t)\delta t										
 
 然后，计算 :math:`t+\delta t` 时刻的粒子位置，
 
 .. math::
-   r(t+\delta t)=r(t)+v(t+(\frac{1}/{2}) \delta t)\delta t									        
+   r(t+\delta t)=r(t)+v(t+(\frac{1}{2}) \delta t)\delta t									        
 
 Leap-frog算法方法虽然直接计算体系的粒子速度，但体系的粒子速度和位置不同步。 :math:`t` 时刻的粒子速度近似为，
 
 .. math::
-   v(t)=(\frac{1}/{2}) [v(t-(\frac{1}/{2}) \delta t)+v(t+(\frac{1}/{2}) \delta t)]											 
+   v(t)=(\frac{1}{2}) [v(t-(\frac{1}{2}) \delta t)+v(t+(\frac{1}{2}) \delta t)]											 
 
 (3)  Velocity Verlet算法：具有更高的计算精度，体系的粒子位置、速度分别表示为，
 
 .. math::
-  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{1}/{2}) a(t)\delta{t^2}	\\								  
-  & v(t+\delta t)=v(t)+(\frac{1}/{2}) [a(t)+a(t+\delta t)]\delta t							      
+  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{1}{2}) a(t)\delta{t^2}	\\								  
+  & v(t+\delta t)=v(t)+(\frac{1}{2}) [a(t)+a(t+\delta t)]\delta t							      
 
 (4)  Beeman's算法：基于Verlet算法改进体系的粒子位置和速度分别为，
 
 .. math::
-  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{2}/{3}) a(t)\delta{t^2}	-(\frac{1}/{6}) a(t-\delta t)\delta{t^2}	\\				
-  & v(t+\delta t)=v(t)+v(t)\delta t+(\frac{1}/{3}) a(t)\delta t+(\frac{5}/{6}) a(t)\delta t-(\frac{1}/{6}) a(t-\delta t)\delta t		      
+  & r(t+\delta t)=r(t)+v(t)\delta t+(\frac{2}{3}) a(t)\delta{t^2}	-(\frac{1}{6}) a(t-\delta t)\delta{t^2}	\\				
+  & v(t+\delta t)=v(t)+v(t)\delta t+(\frac{1}{3}) a(t)\delta t+(\frac{5}{6}) a(t)\delta t-(\frac{1}{6}) a(t-\delta t)\delta t		      
 
 Beeman's算法的计算精确度得到了极大的提高，但计算成本也相应提高
