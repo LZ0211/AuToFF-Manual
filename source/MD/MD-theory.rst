@@ -91,19 +91,19 @@ MD模拟的积分算法
 .. math::
   r(t+\delta(t))=2r(t)-r(t-\delta(t))+a(t)\delta{(t)^2}									        
 
-利用Verlet算法计算 :math:` t+\delta(t)` 时刻的粒子位置，需要t时刻的粒子位置和加速度、以及 :math:` t-\delta(t)` 时刻的粒子位置。该算法计算简单，不直接计算粒子的速度，但算法精度不高。
+利用Verlet算法计算 :math:`t+\delta(t)` 时刻的粒子位置，需要t时刻的粒子位置和加速度、以及 :math:`t-\delta(t)` 时刻的粒子位置。该算法计算简单，不直接计算粒子的速度，但算法精度不高。
 
-(2)  Leap-frog算法：首先计算:math:` t+1/2 \delta(t)`时刻的粒子速度，
+(2)  Leap-frog算法：首先计算 :math:`t+1/2 \delta(t)` 时刻的粒子速度，
 
 .. math::
     v(t+1/2 \delta(t))=v(t-1/2 \delta(t))+a(t)\delta(t)										
 
-然后，计算 :math:` t+\delta(t)` 时刻的粒子位置，
+然后，计算 :math:`t+\delta(t)` 时刻的粒子位置，
 
 .. math::
    r(t+\delta(t))=r(t)+v(t+1/2 \delta(t))\delta(t)									        
 
-Leap-frog算法方法虽然直接计算体系的粒子速度，但体系的粒子速度和位置不同步。 :math:`t`时刻的粒子速度近似为，
+Leap-frog算法方法虽然直接计算体系的粒子速度，但体系的粒子速度和位置不同步。 :math:`t` 时刻的粒子速度近似为，
 
 .. math::
    v(t)=1/2 [v(t-1/2 \delta(t))+v(t+1/2 \delta(t))]											 
