@@ -4,7 +4,7 @@ AuToFF 用户手册
 ================
 
 .. toctree::
-   :caption: 软件简介
+   :caption: AuToFF软件简介
 
    Introduction
 
