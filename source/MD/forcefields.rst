@@ -14,7 +14,7 @@
  不同的分子力场会选取不同的函数形式来描述上述能量与体系构型之间的关系。
 
 GAFF:
-======
+-------------------------------------------------------
 
 .. math::
     E_{pair} = & \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{amgles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1+cos(n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^{12}} \\
@@ -22,7 +22,7 @@ GAFF:
 
 
 AMBER:
-========
+-------------------------------------------------------
 
 .. math::
     E_{pot} = & \sum_{b} K_2(b-b_0)^2 + \sum_{\theta}H_{\theta}(\theta-\theta_0)^2 + \sum_{\phi} \frac{V_n}{2}[1 + \cos(n\phi-\phi_0)] \\
@@ -30,7 +30,7 @@ AMBER:
 
 
 CVFF:
-========
+-------------------------------------------------------
 
 .. math::
     V = & \sum {D_b[1-e^{-\alpha(b-b_0)}]^2 - D_b} + \frac{1}{2}\sum H_0(\theta-\theta_0)^2 + \frac{1}{2}\sum H_{\phi}(1+s\cos{n\phi}) + \frac{1}{2}\sum H_{\chi}\chi^2 \\
@@ -50,7 +50,7 @@ Bond:
     E = K2*(R-R0)^2
 
 PCFF:
-========
+-------------------------------------------------------
 
 .. math::
     & E = \sum E^b + \sum E^{\alpha} + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
@@ -65,7 +65,7 @@ PCFF:
     & E^{VDW} = \sum_{ij} \epsilon_{ij} \left[ 2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6 \right]
 
 CFF:
-=========
+-------------------------------------------------------
 .. math::
     E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-theta_0)^2 + k_3(\theta-theta_0)^3 + k_4(\theta-theta_0)^4] \\
                 & +\sum_{\phi} [k_1(1-\cos \phi) + k_2(1-\cos2\phi) + k_3(1-\cos 3\phi)] + \sum_{\chi} k_2\chi^2 + \sum_{b,b'} k(b-b_0)(b'-b'_0) \\
@@ -75,7 +75,7 @@ CFF:
                 & +\sum_{i,j} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6] 
 
 OPLS:
-===========
+-------------------------------------------------------
 .. math::
     & E_{bond} = \sum_i k_{b,i}(r_i - r_{0,i})^2 \\
     & E_{bend} = \sum_i k_{\vartheta,i}(\vartheta_i - \vartheta_{0,i})^2 \\
@@ -85,7 +85,7 @@ OPLS:
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
 MMFF:
-=========
+-------------------------------------------------------
 .. math::
     V_{total} = & \sum_{bonds} K_{bond}(r-r_{eq})^2(1+cs(r-r{eq}) + frac{2}{7}(cs^2(r-r_{eq})^2)) \\
                 & + \sum_{angle} K_{\theta}(\theta-\theta_{eq})^2(1+cb(\theta-\theta_{eq})) + \sum_{angle,linear} K_{al}(1+\cos(\theta)) \\
