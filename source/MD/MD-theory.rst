@@ -38,35 +38,40 @@ MD模拟的统计力学基础
 -------------------------------------------------------
 
 力场模型是描述体系势能与粒子坐标关系的一组经验势函数，包括势能函数形式和力场参数两个部分。常用的经典力场模型有DREIDING、UFF、OPLS、CVFF、AMBER、GROMOS、CHARMM、COMPASS等。力场参数可以通过从头计算或半经验量子化学计算得到，也可以通过物理化学实验数据（如中子衍射、X射线衍射、电子衍射、核磁共振谱图、红外光谱、拉曼光谱等）拟合得到。分子体系总能量包括成键相互作用和非键相互作用两个部分，
+
 .. math::
-    E_{total}=E_{bonded}+E_{nonbonded}										       
+    E_{total}=E_{bonded}+E_{nonbonded}
+
 其中，:math:`E_{bonded}` 是分子内相互作用，包括键长伸缩、键角弯曲、二面角扭曲、交叉项等作用，
+
 .. math::
     E_{bonded}=E_{bond}+E_{angle}+E_{dihedral}+E_{improper}
 
- * 键伸缩能:表示分子种原子间共价键的相互作用，近似为谐振子势函数
+* 键伸缩能:表示分子种原子间共价键的相互作用，近似为谐振子势函数
 
 .. figure:: images/bond.png
     :align: center
 
- * 键角弯曲能：表示三个原子所形成的键角变化所形成的能量，常见的完整函数形式一般使用的是谐振子势函数
+* 键角弯曲能：表示三个原子所形成的键角变化所形成的能量，常见的完整函数形式一般使用的是谐振子势函数
 
 .. figure:: images/angle.png
     :align: center
     
- * 二面角扭转能：表示四个键合原子，扭转角是围绕中间两个原子之间共价键的旋转角，与键伸缩能和键角弯曲能不同的是，二面角扭转能一类具有多个最低点和最高点，因此采用周期性势函数进行描述
+* 二面角扭转能：表示四个键合原子，扭转角是围绕中间两个原子之间共价键的旋转角，与键伸缩能和键角弯曲能不同的是，二面角扭转能一类具有多个最低点和最高点，因此采用周期性势函数进行描述
  
 .. figure:: images/dihedral.png
     :align: center
     
- * 交叉相互项：表示四个键合原子组成的反常扭转势，其中中心原子i与3个外围原子j、k和i相连。主要用来保持分子结构的平面性
+* 交叉相互项：表示四个键合原子组成的反常扭转势，其中中心原子i与3个外围原子j、k和i相连。主要用来保持分子结构的平面性
 
 .. figure:: images/improper.png
     :align: center
     
 :math:`E_{nonbonded}` 是非键相互作用，包括长程静电力和van der Waals力两部分，
+
 .. math::
     E_{nonbonded}=E_{el}+E_{vdW}											        
+
 在MD模拟中，常用Lennard-Jones势近似 :math:`E_{vdW}` 。
 
 
@@ -76,31 +81,43 @@ MD模拟的积分算法
 实际体系中，描述粒子间相互作用的势能函数复杂，难以求解牛顿运动方程的解析解。因此，在MD模拟过程中采用数值积分的方法求解体系的运动方程，有关常用数值积分算法如下，
 
 (1)  Verlet算法：利用Taylor展开粒子的位置坐标，
+
 .. math::
   & r(t+\delta(t))=r(t)+v(t)\delta(t)+1/2 a(t)\delta{(t)^2}								    
   & r(t-\delta(t))=r(t)-v(t)\delta(t)+1/2 a(t)\delta{(t)^2}									    
+
 上述两式相加得到Verlet算法的基本公式，
+
 .. math::
   r(t+\delta(t))=2r(t)-r(t-\delta(t))+a(t)\delta{(t)^2}									        
+
 利用Verlet算法计算 :math:` t+\delta(t)` 时刻的粒子位置，需要t时刻的粒子位置和加速度、以及 :math:` t-\delta(t)` 时刻的粒子位置。该算法计算简单，不直接计算粒子的速度，但算法精度不高。
 
 (2)  Leap-frog算法：首先计算:math:` t+1/2 \delta(t)`时刻的粒子速度，
+
 .. math::
     v(t+1/2 \delta(t))=v(t-1/2 \delta(t))+a(t)\delta(t)										
+
 然后，计算 :math:` t+\delta(t)` 时刻的粒子位置，
+
 .. math::
    r(t+\delta(t))=r(t)+v(t+1/2 \delta(t))\delta(t)									        
+
 Leap-frog算法方法虽然直接计算体系的粒子速度，但体系的粒子速度和位置不同步。 :math:`t`时刻的粒子速度近似为，
+
 .. math::
    v(t)=1/2 [v(t-1/2 \delta(t))+v(t+1/2 \delta(t))]											 
 
 (3)  Velocity Verlet算法：具有更高的计算精度，体系的粒子位置、速度分别表示为，
+
 .. math::
   & r(t+\delta(t))=r(t)+v(t)\delta(t)+1/2 a(t)\delta{(t)^2}									  
   & v(t+\delta(t))=v(t)+1/2 [a(t)+a(t+\delta(t))]\delta(t)							      
 
 (4)  Beeman's算法：基于Verlet算法改进体系的粒子位置和速度分别为，
+
 .. math::
   & r(t+\delta(t))=r(t)+v(t)\delta(t)+2/3 a(t)\delta{(t)^2}	-1/6 a(t-\delta(t))\delta{(t)^2}					
   & v(t+\delta(t))=v(t)+v(t)\delta(t)+1/3 a(t)\delta(t)+5/6 a(t)\delta(t)-1/6 a(t-\delta(t))\delta(t)		      
+
 Beeman's算法的计算精确度得到了极大的提高，但计算成本也相应提高
