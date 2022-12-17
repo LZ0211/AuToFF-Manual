@@ -17,7 +17,7 @@ GAFF:
 -------------------------------------------------------
 
 .. math::
-    E_{pair} = & \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{amgles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1+cos(n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^{12}} \\
+    E_{pair} = & \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{angles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1 + \cos (n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^{12}} \\
     & - \frac{B_{ij}}{R_{ij}^6} + \frac{q_{i}q_{j}}{\varepsilon R_{ij}}]
 
 
@@ -56,7 +56,7 @@ PCFF:
     & E = \sum E^b + \sum E^{\alpha} + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
     & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
     & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
-    & E^t = \sum_{i=1}^4 k_i^t (1-\cos i\theta) \\
+    & E^t = \sum_{i=1}^4 k_i^t (1- \cos i\theta) \\
     & E^0 = k^0 (\chi -\chi_0)^2 \\
     & {E^{bb}, E^{aa}, E^{ab}} = k^c (s-s_0)(s'-s'_0) \\
     & {E^{bt}} = (b-b_0)\sum_{i=1}^3 k_i^c (1-\cos i\phi) \\
