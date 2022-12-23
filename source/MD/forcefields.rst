@@ -56,11 +56,7 @@ PCFF:
     & E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
     & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
     & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
-<<<<<<< HEAD:source/forcefields.rst
     & E^t = \sum_{i=1}^4 k_i^t (1-\cos{i\phi}) \\
-=======
-    & E^t = \sum_{i=1}^4 k_i^t (1- \cos i\theta) \\
->>>>>>> 279243ae0cd1e9e309d123e415b74b592d014a1c:source/MD/forcefields.rst
     & E^0 = k^0 (\chi -\chi_0)^2 \\
     & \{E^{bb}, E^{aa}, E^{ab}\} = k^c (s-s_0)(s'-s'_0) \\
     & \{E^{bt}\} = (b-b_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
