@@ -4,7 +4,7 @@ AuToFF 用户手册
 ================
 
 .. toctree::
-   :caption: 软件简介
+   :caption: AuToFF软件简介
 
    Introduction
 
@@ -12,9 +12,8 @@ AuToFF 用户手册
    :maxdepth: 4
    :caption: 用户指导
 
-   forcefields
+   MD
    User Guide
-
    
    FQA
    Cite
