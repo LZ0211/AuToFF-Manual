@@ -94,10 +94,10 @@ MMFF:
                 & + \sum_{i<j} [\epsilon(\frac{1.07\sigma}{r_{ij}+0.07\sigma})^7 (\frac{1.12\sigma^7}{r_{ij}^7+0.07\sigma^7}-2) - \frac{q_iq_j}{D(r_{ij}+\delta)}]
 
 UFF:
-=========
+---------
 
-Bond:
-------
+* Bond:
+
 1. Harmonic
 
 .. math::
@@ -109,29 +109,26 @@ Bond:
     E_R = D_{ij}[e^{-\alpha(r-r_{ij})}-1]^2
     \alpha = [\frac{k_{ij}}{2D_{ij}}]^{1/2}
 
-Angle:
--------
+* Angle:
 
 .. math::
     E_{\theta} = \frac{K_{ijk}}{n^2}[1-\cos(n\theta)]
 
-Torsion:
-----------
+* Torsion:
 
 .. math::
     E_{\phi} = 1/2V_{\phi}[1-\cos{n\phi_0}\cos{n\phi}]
 
-LJ:
-------
+* LJ:
 
 .. math::
     E_{vdw} = D_{ij}\{-2[\frac{\chi_{ij}}{\chi}]^6 + [\frac{\chi_{ij}}{\chi}]^{12}\}
 
 Dreiding:
-=========
+----------
 
-Bond:
-------
+* Bond:
+
 1. Harmonic
 
 .. math::
@@ -142,27 +139,24 @@ Bond:
 .. math::
     E = D_e[e^{-(\alpha nR-R_c)}-1]^2
 
-Angle:
--------
+* Angle:
 
 .. math::
     E_{IJK} = K_{IJK}[1+\cos(\theta_{IJK})]
 
-Torsion:
+* Torsion:
 
 .. math::
     E_{IJKL} = 1/2V_{JK}\{1-\cos[n_{JK}(\varphi-\varphi^0_{JK})]\}
 
-LJ:
------
-
+* LJ:
+  
 .. math::
     E_{vdw}^{LJ} = AR^{-12}-BR^{-6}
     or E^{LJ} = D_0[\rho^{-12}-2\rho^{-6}]
     \rho = R/R_0
 
-LJ rules:
------------
+* LJ rules:
 
 .. math::
     D_{oij} = [D_{oii}D_{ojj}]^{1/2}
@@ -174,7 +168,7 @@ However, Dreiding-X6:
     R_{oij} = [R_{oii}R_{ojj}]^{1/2}
 
 PCFF(polymer consistent force field):
-=========
+----------------------------------------
 
 .. math::
     E_{pot} = & \sum_{ij bonded} \sum_{n=2}^4 K_{rn,ij}(r_{ij}-r_{0,ij})^n + \sum_{ijk bonded} \sum_{n=2}^4 K_{\theta n,ijk}(\theta_{ijk}-\theta_{0,ijk})^n \\
@@ -184,22 +178,21 @@ PCFF(polymer consistent force field):
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
 GROMACS:
-=============
+------------
 
-Covalent bond angles:
------------------------
+* Covalent bond angles:
+
 
 .. math::
     V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
 
-Dihedral angles:
-------------------
+* Dihedral angles:
 
 .. math::
     V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
 
 CFF93:
-===============
+-------
 
 .. math::
     & E^b = \sum_{i=2}^4 k_i^b(b-b_0)^i \\
@@ -213,7 +206,7 @@ CFF93:
     & E^{VDW} = \sum_{ij} \epsilon_{i,j} [2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6]
 
 CFF91:
-=========
+--------
 
 .. math::
     V = & \sum_{bonds}D_b[1-e^{-\alpha(b-b_0)}]^2 = \sum_{angles}H_{\theta}(\theta-\theta_0)^2 \\
@@ -225,7 +218,7 @@ CFF91:
         & + \sum_{nonbond}\{-4\epsilon[(\frac{r^{\ast}}{r})^{12} - (\frac{r^{\ast}}{r})^{6}] + \frac{q_1q_2}{r}\}
 
 CLAYFF:
-===========
+----------
 
 .. math::
     & E_{total} = E_{coulombic} + E_{vdw} + E_{bond stretch} + E_{angle bend} \\
@@ -237,50 +230,44 @@ CLAYFF:
     & D_{o,ij} = \sqrt{D_{o,i}D_{o,j}}
 
 GROMOS-53A5 and 53A6:
-======================
+-----------------------
 
-Covalent Bond Interactions
-----------------------------
+* Covalent Bond Interactions
 
 .. math::
     V^{bond}(r;s) = V^{bond}(r;K_b,b_0) = \sum_{n=1}^{N_b} 1/4 K_{bn}[b_n^2 - b_{0n}^2]^2
 
-Covalent Bond-Angle Interactions
---------------------------------------
+* Covalent Bond-Angle Interactions
 
 .. math::
     & V^{angle}(r;s) = V^{angle}(r;K_{\theta},\theta_0) = \sum_{n=1}^{N_{\theta}} 1/2 K_{\theta_n}[\cos{\theta_n}-\cos{\theta_{0n}}]^2 \\
     & K_{\theta n} = \frac{2K_BT}{[\cos(\theta_{0n} + \sqrt{\frac{k_B T}{K_{\theta n}^{harm}}}) - \cos{\theta_{0n}}]^2 + [\cos(\theta_{0n} - \sqrt{\frac{k_B T}{K_{\theta n}^{harm}}})-\cos{\theta_{0n}}]^2}
     
-Improper Dihedral-Angle Interactions
---------------------------------------
+* Improper Dihedral-Angle Interactions
 
 .. math::
     & V^{har}(r;s) = V^{har}(r;K_{\xi},\xi_0) = \sum_{n=1}^{N_{\xi}} 1/2 K_{\xi n}[\xi_n - \xi_{0n}]^2 \\
     & \xi_n = sign(\xi_n)arccos(\frac{r_{mj}\bullet r_{qk}}{r_{mj}r_{qk}})
 
-Torsional Dihedral-Angle Interactions
----------------------------------------
+* Torsional Dihedral-Angle Interactions
 
 .. math::
     V^{trig}(r;s) = V^{trig}(r;K_{\varphi},\delta,m) = \sum_{n=1}^{N_{\varphi}}K_{\varphi n}[1+\cos(\delta_n)\cos(m_n\varphi_n)]
 
-Van der Waals Interactions
-----------------------------
+* Van der Waals Interactions
 
 .. math::
     & V^{LJ}(r;s) = V^{LJ}(r;C12,C6) = \sum_{pairs\ i,j}(\frac{C12_{ij}}{r_{ij}^{12}} - \frac{C6_{ij}}{r_{ij}^{6}}) \\
     & C12_{ij} = \sqrt{C12_{ij}\bullet C12_{jj}} \\
     & C6_{ij} = \sqrt{C6_{ij}\bullet C6_{jj}}
 
-Electrostatic Interactions
-------------------------------
+* Electrostatic Interactions
 
 .. math::
     V^C(r;s) = V^C(r;q) = \sum_{pairs\ i,j} \frac{q_iq_j}{4\pi\epsilon_0\epsilon_1}\frac{1}{r_{ij}}
 
 CHARMM:
-=============
+------------
 
 .. math::
     U(\vec{R}) = & \underbrace{\sum_{bonds}k_i^{bond}(r_i-r_0)^2}_{U_{bond}} + \underbrace{\sum_{angles}k_i^{angle}(\theta_i-\theta_0)^2}_{U_{angle}} \\
@@ -292,18 +279,16 @@ CHARMM:
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
 CGenFF:
-========
+-------------
 
-Intramolecular(internal, bonded terms)
----------------------------------------
+* Intramolecular(internal, bonded terms)
 
 .. math::
     & \sum_{bonds}K_b(b-b_0)^2 + \sum_{angles}K_{\theta}(\theta-\theta_0)^2 \\
     & + \sum_{dihedrals}K_{\phi}(1+\cos(n\phi-\theta)) + \sum_{improper\ dihedrals}K_{\varphi}(\varphi-\varphi_0)^2 \\
     & \sum_{Urey-Bradtey}K_{UB}(r_{1,3}-r_{1,3;0})^2
 
-Intermolecular(external, nonbonded terms)
---------------------------------------------
+* Intermolecular(external, nonbonded terms)
 
 .. math::
     \sum_{nonbonded}\frac{q_iq_j}{4\pi Dr_{ij}} + \epsilon_{ij}[(\frac{R_{min,ij}}{r_{ij}})^{12}-2(\frac{R_{min,ij}}{r_{ij}})^6]

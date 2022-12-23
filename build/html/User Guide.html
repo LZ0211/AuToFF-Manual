@@ -30,7 +30,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="参考文献" href="References.html" />
-    <link rel="prev" title="分子力场类型" href="forcefields.html" /> 
+    <link rel="prev" title="分子动力学模拟(MD)" href="MD.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,14 +48,30 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">软件简介</span></p>
+              <p class="caption"><span class="caption-text">AuToFF软件简介</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF 软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html#id1">免费使用AuToFF</a></li>
 </ul>
 <p class="caption"><span class="caption-text">用户指导</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="forcefields.html">分子力场类型</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MD.html">分子动力学模拟(MD)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#aa-ff">全原子力场</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">创建分子结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">根据力场选择原子类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">生成拓扑文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ua-ff">联合原子力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#il">离子液体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#carbon">碳材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mofs-cofs">金属/共轭有机框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minerals">无机晶体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polymers">聚合物建模</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bio">生物大分子</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">参考文献</a></li>
 </ul>
 
@@ -85,14 +101,104 @@
              
   <div class="section" id="id1">
 <h1>快速入门<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>本章将介绍AuToFF的各种功能的基本使用，针对具体的功能给出基本的使用说明。</p>
+<p>本章将介绍AuToFF的各种功能，并针对具体的功能给出基本的使用说明。</p>
+<div class="section" id="aa-ff">
+<span id="id2"></span><h2>全原子力场<a class="headerlink" href="#aa-ff" title="永久链接至标题">¶</a></h2>
+<p>全原子力场 (All-atom force fields) 中，体系的力点与分子中的全部原子一一对应，质量集中在原子核上。也就是说，力点与原子核的位置或原子的质心位置重合。简单来说，全原子力场中，分子由其组成原子为质点的集合构成。全原子力场的优点是具有更高精确度，可以更好地描述生物分子体系的结构与性质。但是，全原子力场的计算量大，模拟效率低。因此，在计算资源受到限制时，模拟者必须减少模拟体系的规模或缩短模拟体系的实际演化时间，影响模拟效果。</p>
+<div class="section" id="id3">
+<h3>创建分子结构<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建立自己所期望的分子构型。同时，也支持多种结构文件(.mol/.pdb/.xyz/.mol2)的导入识别。</p>
+<div class="figure align-center">
+<img alt="images/AA-FF-创建分子结构.png" src="images/AA-FF-创建分子结构.png" />
+</div>
+</div>
+<div class="section" id="id4">
+<h3>根据力场选择原子类型<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括AM1BCC、MMFF94、RESP等。</p>
+<div class="figure align-center">
+<img alt="images/AA-FF-根据力场选择原子类型.png" src="images/AA-FF-根据力场选择原子类型.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<ol class="arabic simple">
+<li><p>OPLS力场的势函数被严格限制于最常见的势函数形式：共价键伸缩势和键角弯曲势采用谐振子势函数，二面角扭曲势只包括Fourier展开式的前三项，van der Waals相互作用采用Lennard-Jones 12-6 势函数，静电相互作用采用库伦是函数。同时，所有力点位于原子（核）上，不考虑力点偏离原子中心。在计算分子内非键相互作用时，完全排除1-2和1-3相互作用，但只排除50%的1-4相互作用。计算交叉项的van der Waals相互作用时，采用Lorentz-Berthelot混合规则计算Lennard-Jones势函数。</p></li>
+<li><p>在描写水分子的力场中，TIP3P是全原子力场，质点、力点、电荷点重合。相反，TIP4P、TIP5P等，力点的数目超过质点的数目或原子数。选择力点与分子中各个原子核的位置重叠，可以在模拟中省去重新分布受力和力矩的计算。</p></li>
+<li><p>在模拟生物分子的水溶液时，OPLS力场应与TIP4P或TIP3P水分子模型搭配，可以取得更好的模拟效果。</p></li>
+<li><p>CGenFF力场是CHARMM的通用力场，多了一项Urey-Bradley相互作用势，以弥补键角弯曲势的不足。</p></li>
+<li><p>在DREIDING力场中，参与分子内或分子间相互作用的所有原子，都被按其成键的杂化类型或几何构型进行系统分类，同种类型的原子参与相互作用性质相同，不同种类型的原子参与相互作用性质不同。DREIDING力场在计算结合能和分子相互作用时的精度更高，但一些过渡金属元素相关参数存在缺失。</p></li>
+<li><p>UFF力场比DREIDING力场有更广泛的适用范围，是对DREIDING力场的发展。</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>生成拓扑文件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>用户建立完分子结构，选择相应的力场，进而生成拓扑文件，也可进行力场参数的修改。最后，选择计算软件从而生成相应的输入文件，帮助用户解决力场的选择、参数的生成、复杂体系的建模等多种分子模拟过程种遇到的困难，AuToFF可以有效降低这些使用门槛，可以极大的扩大分子动力学模拟的用户群体。</p>
+<div class="figure align-center">
+<img alt="images/AA-FF-生成拓扑文件.png" src="images/AA-FF-生成拓扑文件.png" />
+</div>
+</div>
+</div>
+<div class="section" id="ua-ff">
+<span id="id6"></span><h2>联合原子力场<a class="headerlink" href="#ua-ff" title="永久链接至标题">¶</a></h2>
+<p>联合原子力场 (united-atom force fields) 与碳原子直接键连的氢原子的相对原子质量被重叠到碳原子上，形成一个联合原子的整体，同时，其他原子对氢原子的相互作用也被叠加到联合原子上，从而可以大幅度降低力场的复杂性，减少势参数，减少计算非键相互作用的数量和计算时间。在联合原子力场中，力点数少于原子数，是分子的不完全表述。
+目前支持的联合原子力场包括TraPPE-UA、OPLS-UA、GROMOS54a7、GROMOS54a8</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<ol class="arabic simple">
+<li><p>GROMOS力场是用于生物分子模拟的最重要分子力场之一，其中赝扭曲势是一个非常重要的势能项，不但保证了羰基结构、芳香环结构、蛋白质骨架中酰胺基结构、DNA分子中碱基结构等平面构型，还保证了隐含一个氢原子的 <span class="math notranslate nohighlight">\(SP^3\)</span> 杂化碳原子（与碳原子键联的另外三个原子为非氢原子，显式处理）的正确四面体结构，避免因为计算原因引起的光学活性中心的错误消旋。GROMOS共有三组赝扭曲势参数，其中的两组参数作用是保证分子中平面构型的正确性，剩下一组参数的作用是保证 <span class="math notranslate nohighlight">\(SP^3\)</span> 杂化的四面体结构的正确性。</p></li>
+<li><p>TraPPE力场中所有键长被约束在平衡位置，不允许振动，不需要共价键伸缩势。因此，成键相互作用只包括键角弯曲势、二面角扭曲势和离面弯曲势三种类型。</p></li>
+<li><p>OPLS-UA力场中,所有与碳原子成键的氢原子不直接出现在力场中，而是隐含在与碳原子的力场参数中。</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="il">
+<span id="id7"></span><h2>离子液体<a class="headerlink" href="#il" title="永久链接至标题">¶</a></h2>
+<p>目前支持的离子液体相关力场包括CL&amp;P、OPLS-2009IL、Merz</p>
+</div>
+<div class="section" id="carbon">
+<span id="id8"></span><h2>碳材料<a class="headerlink" href="#carbon" title="永久链接至标题">¶</a></h2>
+<p>目前碳材料模块支持四种碳材料的建模，包括富勒烯、石墨烯、单壁碳纳米管、多壁碳纳米管。</p>
+<div class="figure align-center">
+<img alt="images/carbon-创建分子结构.png" src="images/carbon-创建分子结构.png" />
+</div>
+</div>
+<div class="section" id="mofs-cofs">
+<span id="id9"></span><h2>金属/共轭有机框架<a class="headerlink" href="#mofs-cofs" title="永久链接至标题">¶</a></h2>
+<p>目前本模块搭载了金属/共轭有机框架结构数据库，支持全原子力场以及针对MOFs/COFs材料特定力场</p>
+<div class="figure align-center">
+<img alt="images/MOF-COF-选择晶体文件.png" src="images/MOF-COF-选择晶体文件.png" />
+</div>
+</div>
+<div class="section" id="minerals">
+<span id="id10"></span><h2>无机晶体<a class="headerlink" href="#minerals" title="永久链接至标题">¶</a></h2>
+<p>目前本模块搭载了多种无机晶体结构数据库，方便用户直接导入结构模型，包括沸石、氧化物、硫化物、硫酸盐、氮化物、碳化物、碳酸盐、卤化物、氢氧化物、粘土等。此外，针对无机晶体支持的力场包括ClayFF、COMPASS、CVFF、PCFF、CFF91</p>
+<div class="figure align-center">
+<img alt="images/Minerals-选择晶体文件.png" src="images/Minerals-选择晶体文件.png" />
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<ol class="arabic simple">
+<li><p>COMPASS力场是由上海交通大学孙淮教授课题组开发的第一个出自量子力学从头计算的新一代力场。比较CVFF、PCFF以及Universal等其他的力场，COMPASS力场的原子信息，能量和尺度参数等较全，可以应用于有机分子、无机分子和聚合物等多类复杂体系，甚至能准确得到凝聚态体系的物理图景和各种宏观性质，使模拟计算具有高精度的预测能力。使用该力场可以在很宽的温度和压力区间内准确得到体系中各粒子的振动情况及热物理性质，也可以用来研究具有表面或存在共混现象的比较复杂的体系，这是其他力场难以实现的。</p></li>
+<li><p>PCFF力场更适用于聚合物一类的有机材料，以及包含二十种金属，也可运用在糖类、脂类和核酸体系中。</p></li>
+<li><p>CVFF 力场又称一致共价力场，更适用于计算蛋白质，多肽等生化大分子有机体系。</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="polymers">
+<span id="id11"></span><h2>聚合物建模<a class="headerlink" href="#polymers" title="永久链接至标题">¶</a></h2>
+<p>该功能暂未开放</p>
+</div>
+<div class="section" id="bio">
+<span id="id12"></span><h2>生物大分子<a class="headerlink" href="#bio" title="永久链接至标题">¶</a></h2>
+<p>该功能暂未开放</p>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="forcefields.html" class="btn btn-neutral float-left" title="分子力场类型" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="MD.html" class="btn btn-neutral float-left" title="分子动力学模拟(MD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="References.html" class="btn btn-neutral float-right" title="参考文献" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

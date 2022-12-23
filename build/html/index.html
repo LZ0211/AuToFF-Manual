@@ -29,7 +29,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="AuToFF 软件简介" href="Introduction.html" /> 
+    <link rel="next" title="AuToFF软件简介" href="Introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,13 +47,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption"><span class="caption-text">软件简介</span></p>
+              <p class="caption"><span class="caption-text">AuToFF软件简介</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF 软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html#id1">免费使用AuToFF</a></li>
 </ul>
 <p class="caption"><span class="caption-text">用户指导</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="forcefields.html">分子力场类型</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MD.html">分子动力学模拟(MD)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="User Guide.html">快速入门</a></li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">参考文献</a></li>
 </ul>
@@ -85,63 +86,99 @@
   <div class="section" id="autoff">
 <h1>AuToFF 用户手册<a class="headerlink" href="#autoff" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">软件简介</span></p>
+<p class="caption"><span class="caption-text">AuToFF软件简介</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF 软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">AuToFF软件简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html#id1">免费使用AuToFF</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">用户指导</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="forcefields.html">分子力场类型</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#gaff">GAFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#amber">AMBER:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#cvff">CVFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#pcff">PCFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#cff">CFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#opls">OPLS:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#mmff">MMFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#uff">UFF:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#bond">Bond:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#angle">Angle:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#torsion">Torsion:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#lj">LJ:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MD.html">分子动力学模拟(MD)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#md-theory">分子动力学模拟(MD)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id2">MD模拟的统计力学基础</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id3">分子内和分子间相互作用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id4">分子间相互作用模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id5">MD模拟的积分算法</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#dreiding">Dreiding:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#id2">Bond:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#id3">Angle:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#id4">LJ:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#lj-rules">LJ rules:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#forcefields">分子力场类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#gaff">GAFF:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#amber">AMBER:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#cvff">CVFF:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#pcff">PCFF:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#cff">CFF:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#opls">OPLS:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#mmff">MMFF:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#pcff-polymer-consistent-force-field">PCFF(polymer consistent force field):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#gromacs">GROMACS:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#covalent-bond-angles">Covalent bond angles:</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#dihedral-angles">Dihedral angles:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#uff">UFF:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#bond">Bond:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#angle">Angle:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#torsion">Torsion:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#lj">LJ:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#cff93">CFF93:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#cff91">CFF91:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#clayff">CLAYFF:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#gromos-53a5-and-53a6">GROMOS-53A5 and 53A6:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#covalent-bond-interactions">Covalent Bond Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#covalent-bond-angle-interactions">Covalent Bond-Angle Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#improper-dihedral-angle-interactions">Improper Dihedral-Angle Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#torsional-dihedral-angle-interactions">Torsional Dihedral-Angle Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#van-der-waals-interactions">Van der Waals Interactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#electrostatic-interactions">Electrostatic Interactions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#dreiding">Dreiding:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id7">Bond:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id8">Angle:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id9">LJ:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#lj-rules">LJ rules:</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#charmm">CHARMM:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forcefields.html#cgenff">CGenFF:</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#intramolecular-internal-bonded-terms">Intramolecular(internal, bonded terms)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="forcefields.html#intermolecular-external-nonbonded-terms">Intermolecular(external, nonbonded terms:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#pcff-polymer-consistent-force-field">PCFF(polymer consistent force field):</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#gromacs">GROMACS:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#covalent-bond-angles">Covalent bond angles:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#dihedral-angles">Dihedral angles:</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#cff93">CFF93:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#cff91">CFF91:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#clayff">CLAYFF:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#gromos-53a5-and-53a6">GROMOS-53A5 and 53A6:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#covalent-bond-interactions">Covalent Bond Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#covalent-bond-angle-interactions">Covalent Bond-Angle Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#improper-dihedral-angle-interactions">Improper Dihedral-Angle Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#torsional-dihedral-angle-interactions">Torsional Dihedral-Angle Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#van-der-waals-interactions">Van der Waals Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#electrostatic-interactions">Electrostatic Interactions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#charmm">CHARMM:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#cgenff">CGenFF:</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#intramolecular-internal-bonded-terms">Intramolecular(internal, bonded terms)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#intermolecular-external-nonbonded-terms">Intermolecular(external, nonbonded terms)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MD.html#md-software">分子动力学模拟软件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#lammps">LAMMPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id11">GROMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id12">AMBER</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#moltemplate">Moltemplate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#openmm">OpenMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#tinker">Tinker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="MD.html#id13">CHARMM</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="User Guide.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="User Guide.html">快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#aa-ff">全原子力场</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="User Guide.html#id3">创建分子结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User Guide.html#id4">根据力场选择原子类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="User Guide.html#id5">生成拓扑文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#ua-ff">联合原子力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#il">离子液体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#carbon">碳材料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#mofs-cofs">金属/共轭有机框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#minerals">无机晶体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#polymers">聚合物建模</a></li>
+<li class="toctree-l2"><a class="reference internal" href="User Guide.html#bio">生物大分子</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="References.html">参考文献</a></li>
 </ul>
 </div>
@@ -151,7 +188,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Introduction.html" class="btn btn-neutral float-right" title="AuToFF 软件简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Introduction.html" class="btn btn-neutral float-right" title="AuToFF软件简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
