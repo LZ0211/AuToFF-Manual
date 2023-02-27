@@ -14,6 +14,7 @@ AuToFF 用户手册
 
    MD
    User Guide
+   example
    
    FQA
    Cite
