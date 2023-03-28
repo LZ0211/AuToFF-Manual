@@ -8,7 +8,7 @@
 
 
 
-.. figure:: images/carbon-创建分子结构.png
+.. figure:: image/carbon-创建分子结构.png
     :align: center
 
 

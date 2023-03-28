@@ -29,7 +29,7 @@ MD模拟的统计力学基础
 
 其中，r=σ对应体系势能为0的位置，ε是势阱的深度。对于复杂体系，难于利用量子力学理论精确计算U(r)，也难于用实验测量分子间相互作用力。
 
-.. figure:: images/LJ.png
+.. figure:: image/LJ.png
     :align: center
 .. centered:: 图 1  分子间相互作用Lennard-Jones势函数U(r)与分子间距离r的关系
 
@@ -49,22 +49,22 @@ MD模拟的统计力学基础
 
 * 键伸缩能:表示分子种原子间共价键的相互作用，近似为谐振子势函数
 
-.. figure:: images/bond.png
+.. figure:: image/bond.png
     :align: center
 
 * 键角弯曲能：表示三个原子所形成的键角变化所形成的能量，常见的完整函数形式一般使用的是谐振子势函数
 
-.. figure:: images/angle.png
+.. figure:: image/angle.png
     :align: center
     
 * 二面角扭转能：表示四个键合原子，扭转角是围绕中间两个原子之间共价键的旋转角，与键伸缩能和键角弯曲能不同的是，二面角扭转能一类具有多个最低点和最高点，因此采用周期性势函数进行描述
  
-.. figure:: images/dihedral.png
+.. figure:: image/dihedral.png
     :align: center
     
 * 交叉相互项：表示四个键合原子组成的反常扭转势，其中中心原子i与3个外围原子j、k和i相连。主要用来保持分子结构的平面性
 
-.. figure:: images/improper.png
+.. figure:: image/improper.png
     :align: center
     
 :math:`E_{nonbonded}` 是非键相互作用，包括长程静电力和van der Waals力两部分，

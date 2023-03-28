@@ -7,7 +7,7 @@
 
 
 
-.. figure:: images/Minerals-选择晶体文件.png
+.. figure:: image/Minerals-选择晶体文件.png
     :align: center
 
 .. note::

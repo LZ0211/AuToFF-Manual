@@ -11,7 +11,7 @@
 AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建立自己所期望的分子构型。同时，也支持多种结构文件(.mol/.pdb/.xyz/.mol2)的导入识别。
 
 
-.. figure:: images/AA-FF-创建分子结构.png
+.. figure:: image/AA-FF-创建分子结构.png
     :align: center
 .. centered::图1.1  创建分子结构
 
@@ -21,7 +21,7 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
 目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括AM1BCC、MMFF94、RESP等。
 
 
-.. figure:: images/AA-FF-根据力场选择原子类型.png
+.. figure:: image/AA-FF-根据力场选择原子类型.png
     :align: center
 .. centered::图1.2  根据力场选择原子类型
 
@@ -39,7 +39,7 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
 用户建立完分子结构，选择相应的力场，进而生成拓扑文件，也可进行力场参数的修改。最后，选择计算软件从而生成相应的输入文件，帮助用户解决力场的选择、参数的生成、复杂体系的建模等多种分子模拟过程种遇到的困难，AuToFF可以有效降低这些使用门槛，可以极大的扩大分子动力学模拟的用户群体。
 
 
-.. figure:: images/AA-FF-生成拓扑文件.png
+.. figure:: image/AA-FF-生成拓扑文件.png
     :align: center
 .. centered::图1.3  生成拓扑文件
 

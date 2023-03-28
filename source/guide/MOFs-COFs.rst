@@ -7,5 +7,5 @@
 
 
 
-.. figure:: images/MOF-COF-选择晶体文件.png
+.. figure:: image/MOF-COF-选择晶体文件.png
     :align: center
