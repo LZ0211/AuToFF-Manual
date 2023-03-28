@@ -12,13 +12,13 @@
 ########################################################
 确定双(氟磺酰)亚胺(FSI)阴离子结构，可选择点击AuToFF程序-离子液体模块进行2D建模（如图1），点击“生成3d结构视图”按钮即可3D显示。
 
-.. figure:: images/example-IL/创建FSI结构.png
+.. figure:: image/example-IL/创建FSI结构.png
     :align: center
 .. centered::图3.1.1  创建FSI分子结构
 
 完成分子建模后，可以支持多种结构文件类型下载，包括.pdb、.mol、.mol2、.xyz
 
-.. figure:: images/example-IL/下载结构文件.png
+.. figure:: image/example-IL/下载结构文件.png
     :align: center
 .. centered::图3.1.2  下载结构文件
 
@@ -40,7 +40,7 @@
 
 同理，建立了THF分子结构如下：
 
-.. figure:: images/example-IL/创建THF分子结构.png
+.. figure:: image/example-IL/创建THF分子结构.png
     :align: center
 .. centered::图3.1.3  创建THF分子结构
 
@@ -65,7 +65,7 @@ THF分子的pdb结构文件如下：
  
 同理，建立了TTE分子结构如下：
 
-.. figure:: images/example-IL/创建TTE分子结构.png
+.. figure:: image/example-IL/创建TTE分子结构.png
     :align: center
 .. centered::图3.1.4  创建TTE分子结构
 
@@ -109,7 +109,7 @@ TTE分子的pdb结构文件如下：
 
 选择适当的力场是进行MD模拟的基础，可以快速地获得准确的模拟结果。针对离子液体FSI选择OPLS力场即可，确定原子类型
 
-.. figure:: images/example-IL/根据力场选择原子类型.png
+.. figure:: image/example-IL/根据力场选择原子类型.png
     :align: center
 .. centered::图3.1.5  根据力场选择原子类型
 
@@ -122,7 +122,7 @@ TTE分子的pdb结构文件如下：
 
 根据力场的选择即可生成拓扑文件的相关力场参数，包括LJ、键、键角、二面角参数，原子电荷。此外生成拓扑文件可支持多款计算软件，包括：GROMACS、LAMMPS、AMBER、Moltemplate、OpenMM、TINKER、CHARMM。下载的文件夹中除了力场拓扑文件之外还包含力场参数的文献来源。
 
-.. figure:: images/example-IL/生成拓扑文件.png
+.. figure:: image/example-IL/生成拓扑文件.png
     :align: center
 .. centered::图3.1.6  生成拓扑文件
 
@@ -165,7 +165,7 @@ TTE分子的pdb结构文件如下：
 
 运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了锂离子离子液体电解质模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的model.pdb导入到VMD显示如下
 
-.. figure:: images/example-IL/packmol建立初始模型.bmp
+.. figure:: image/example-IL/packmol建立初始模型.bmp
     :align: center
 .. centered::图3.1.7  模拟体系初始构型
 
@@ -314,7 +314,7 @@ MD结果分析
 
 取出模拟平衡后最后一帧结构，导入VMD即可查看快照图如下：
 
-.. figure:: images/example-IL/模拟平衡结构快照图.bmp
+.. figure:: image/example-IL/模拟平衡结构快照图.bmp
     :align: center
 .. centered::图3.1.8  模拟平衡结构快照图
 
@@ -335,7 +335,7 @@ MD结果分析
 其中，:math:`\ce{r_{min}}` 为径向分布函数中第一波谷对应的位置， :math:`{\rho_𝛽}` 为体系中平均粒子密度。
 
 
-.. figure:: images/example-IL/RDF.bmp
+.. figure:: image/example-IL/RDF.bmp
     :align: center
 .. centered::图3.1.9  径向分布函数图
 
@@ -348,7 +348,7 @@ MD结果分析
 
 为了探究 :math:`\ce{Li^+}` 的扩散系数，gromacs可计算均方位移，模拟了不同温度下离子的扩散性质，如下图:
 
-.. figure:: images/example-IL/MSD.bmp
+.. figure:: image/example-IL/MSD.bmp
     :align: center
 .. centered::图3.1.10  均方位移图
 
