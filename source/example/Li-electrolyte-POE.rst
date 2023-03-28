@@ -262,7 +262,7 @@ MD结果分析
 
 取出模拟平衡后最后一帧结构，导入VMD即可查看快照图如下：
 
-.. figure:: image/example-POE/模拟平衡结构快照图.bmp
+.. figure:: image/example-POE/模拟平衡结构快照图.png
     :align: center
 .. centered::图3.2.7  模拟平衡结构快照图
 
@@ -283,7 +283,7 @@ MD结果分析
 其中，:math:`\ce{r_{min}}` 为径向分布函数中第一波谷对应的位置， :math:`{\rho_𝛽}` 为体系中平均粒子密度。
 
 
-.. figure:: image/example-POE/RDF.bmp
+.. figure:: image/example-POE/RDF.png
     :align: center
 .. centered::图3.2.8  径向分布函数图
 
@@ -296,7 +296,7 @@ MD结果分析
 
 为了探究 :math:`\ce{Li^+}` 的扩散系数，gromacs可计算均方位移，模拟了不同温度下离子的扩散性质，如下图:
 
-.. figure:: image/example-POE/MSD.bmp
+.. figure:: image/example-POE/MSD.png
     :align: center
 .. centered::图3.2.9  均方位移图
 
