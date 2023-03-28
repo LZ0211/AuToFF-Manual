@@ -35,7 +35,7 @@
     ATOM      9  F1  NS      1      -1.649   1.230   0.367  1.00  0.00
     END
 
-还建立了 :math:`\ce{Li^+}` 结构，Li离子的pdb结构文件如下：
+还建立了 :math:`\ce{Li^+}` 结构， :math:`\ce{Li^+}` 的pdb结构文件如下：
 
 .. code-block:: 
 
