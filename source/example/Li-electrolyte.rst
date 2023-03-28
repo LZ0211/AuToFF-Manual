@@ -35,7 +35,7 @@
     ATOM      9  F1  NS      1      -1.649   1.230   0.367  1.00  0.00
     END
 
-还建立了Li离子结构，Li离子的pdb结构文件如下：
+还建立了 :math:`\ce{Li^+}` 结构，Li离子的pdb结构文件如下：
 
 .. code-block:: 
 
@@ -108,7 +108,7 @@
 
   
 
-运行packmol < model.inp可生成model.pdb文件，该文件包含了锂离子固态电解质模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的model.pdb导入到VMD显示如下
+运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了锂离子固态电解质模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的model.pdb导入到VMD显示如下
 .. figure:: images/packmol建立初始模型.bmp
     :align: center
 .. centered::图3.6  模拟体系初始构型
