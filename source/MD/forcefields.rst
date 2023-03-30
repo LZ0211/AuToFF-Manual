@@ -42,18 +42,19 @@ Bond:
 1) Morse:
 
 .. math::
-    E = D*(1-exp(-ALPHA*(R-R0)))^2
+    E = D*(1-exp(-ALPHA*(R-R_0)))^2
 
 2) Harmonic:
 
 .. math::
-    E = K2*(R-R0)^2
+    E = K_2*(R-R_0)^2
 
-PCFF
--------------------------------------------------------
+\iffalse 
+ PCFF
+ -------------------------------------------------------
 
-.. math::
-     & E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
+ .. math::
+      E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
      & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
      & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
      & E^t = \sum_{i=1}^4 k_i^t (1-\cos{i\phi}) \\
@@ -63,6 +64,7 @@ PCFF
      & \{E^{at}\} = (\theta-\theta_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
      & E^{elec} = \sum_{ij} \frac{q_iq_j}{r_{ij}} \\
      & E^{VDW} = \sum_{ij} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6]
+\fi
 
 CFF
 -------------------------------------------------------
@@ -177,19 +179,21 @@ PCFF(polymer consistent force field)
               & + \frac{1}{4\pi\epsilon_0\epsilon_r} \sum_{ij nonbonded} \frac{q_iq_j}{r_{ij}} \\
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
-% GROMACS
-%------------
+\iffalse 
+GROMACS
+------------
 
-%   Covalent bond angles:
+   Covalent bond angles:
 
 
-% .. math::
-%    V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
+ .. math::
+   V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
 
-%   Dihedral angles:
+   Dihedral angles:
 
-% .. math::
- %    V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
+ .. math::
+    V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
+\fi
 
 CFF93
 -------
