@@ -13,7 +13,7 @@
 
  不同的分子力场会选取不同的函数形式来描述上述能量与体系构型之间的关系。
 
-GAFF:
+GAFF
 -------------------------------------------------------
 
 .. math::
@@ -21,7 +21,7 @@ GAFF:
     & - \frac{B_{ij}}{R_{ij}^6} + \frac{q_{i}q_{j}}{\varepsilon R_{ij}}]
 
 
-AMBER:
+AMBER
 -------------------------------------------------------
 
 .. math::
@@ -29,7 +29,7 @@ AMBER:
     & + \sum \varepsilon[(\frac{r^*}{r})^{12}-2(\frac{r^*}{r})^6] + \sum \frac{q_{i}q_{j}}{\varepsilon_{ij}r_{ij}} + \sum[\frac{C_{ij}}{r_{ij}^{12}}] + \sum[\frac{C_{ij}}{r_{ij}^{12}} - \frac{D_{ij}}{r_{ij}^{10}}]
 
 
-CVFF:
+CVFF
 -------------------------------------------------------
 
 .. math::
@@ -49,11 +49,11 @@ Bond:
 .. math::
     E = K2*(R-R0)^2
 
-PCFF:
+PCFF
 -------------------------------------------------------
 
 .. math::
-    & E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
+     E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
     & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
     & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
     & E^t = \sum_{i=1}^4 k_i^t (1-\cos{i\phi}) \\
@@ -64,7 +64,7 @@ PCFF:
     & E^{elec} = \sum_{ij} \frac{q_iq_j}{r_{ij}} \\
     & E^{VDW} = \sum_{ij} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6]
 
-CFF:
+CFF
 -------------------------------------------------------
 .. math::
     E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-\theta_0)^2 + k_3(\theta-\theta_0)^3 + k_4(\theta-\theta_0)^4] \\
@@ -74,7 +74,7 @@ CFF:
                 & + \sum_{\theta,\theta,\phi} k(\theta-\theta_0)(\theta'-\theta_0')\cos\phi + \sum_{i,j} \frac{q_iq_j}{r_{ij}} \\
                 & +\sum_{i,j} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6] 
 
-OPLS:
+OPLS
 -------------------------------------------------------
 .. math::
     & E_{bond} = \sum_i k_{b,i}(r_i - r_{0,i})^2 \\
@@ -84,7 +84,7 @@ OPLS:
     & \sigma_{ij} = \sqrt{\sigma_{ii}\sigma_{jj}} \\
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
-MMFF:
+MMFF
 -------------------------------------------------------
 .. math::
     V_{total} = & \sum_{bonds} K_{bond}(r-r_{eq})^2(1+cs(r-r{eq}) + \frac{2}{7}(cs^2(r-r_{eq})^2)) \\
@@ -93,7 +93,7 @@ MMFF:
                 & + \sum_{dihedrals} \frac{V_1}{2}[1+\cos(\phi)] + \frac{V_2}{2}[1+\cos(2\phi)] + \frac{V_3}{2}[1+\cos(3\phi)] \\
                 & + \sum_{i<j} [\epsilon(\frac{1.07\sigma}{r_{ij}+0.07\sigma})^7 (\frac{1.12\sigma^7}{r_{ij}^7+0.07\sigma^7}-2) - \frac{q_iq_j}{D(r_{ij}+\delta)}]
 
-UFF:
+UFF
 ---------
 
   Bond:
@@ -124,7 +124,7 @@ UFF:
 .. math::
     E_{vdw} = D_{ij}\{-2[\frac{\chi_{ij}}{\chi}]^6 + [\frac{\chi_{ij}}{\chi}]^{12}\}
 
-Dreiding:
+Dreiding
 ----------
 
   Bond:
@@ -167,7 +167,7 @@ However, Dreiding-X6:
 .. math::
     R_{oij} = [R_{oii}R_{ojj}]^{1/2}
 
-PCFF(polymer consistent force field):
+PCFF(polymer consistent force field)
 ----------------------------------------
 
 .. math::
@@ -177,21 +177,21 @@ PCFF(polymer consistent force field):
               & + \frac{1}{4\pi\epsilon_0\epsilon_r} \sum_{ij nonbonded} \frac{q_iq_j}{r_{ij}} \\
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
-GROMACS:
+# GROMACS
 ------------
 
-  Covalent bond angles:
+#   Covalent bond angles:
 
 
-.. math::
-    V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
+# .. math::
+#     V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
 
-  Dihedral angles:
+#   Dihedral angles:
 
-.. math::
-    V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
+# .. math::
+ #    V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
 
-CFF93:
+CFF93
 -------
 
 .. math::
@@ -205,7 +205,7 @@ CFF93:
     & E_{ec}^{el} = \sum_{ij}\frac{q_iq_j}{r_{ij}} \\
     & E^{VDW} = \sum_{ij} \epsilon_{i,j} [2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6]
 
-CFF91:
+CFF91
 --------
 
 .. math::
@@ -217,7 +217,7 @@ CFF91:
         & + \sum_{\tau\theta\theta'}F_{\tau\theta\theta'}\cos{\tau}(\theta-\theta_0)(\theta'-\theta'_0) \\
         & + \sum_{nonbond}\{-4\epsilon[(\frac{r^{\ast}}{r})^{12} - (\frac{r^{\ast}}{r})^{6}] + \frac{q_1q_2}{r}\}
 
-CLAYFF:
+CLAYFF
 ----------
 
 .. math::
@@ -229,7 +229,7 @@ CLAYFF:
     & R_{o,ij} = 1/2(R_{o.i} + R_{o,j}) \\
     & D_{o,ij} = \sqrt{D_{o,i}D_{o,j}}
 
-GROMOS-53A5 and 53A6:
+GROMOS-53A5 and 53A6
 -----------------------
 
 * Covalent Bond Interactions
@@ -266,7 +266,7 @@ GROMOS-53A5 and 53A6:
 .. math::
     V^C(r;s) = V^C(r;q) = \sum_{pairs\ i,j} \frac{q_iq_j}{4\pi\epsilon_0\epsilon_1}\frac{1}{r_{ij}}
 
-CHARMM:
+CHARMM
 ------------
 
 .. math::
@@ -278,7 +278,7 @@ CHARMM:
     & \sigma_{ij} = \frac{\sigma_{ii}+\sigma_{jj}}{2} \\
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
-CGenFF:
+CGenFF
 -------------
 
 * Intramolecular(internal, bonded terms)
