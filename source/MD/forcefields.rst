@@ -83,7 +83,7 @@ MMFF
 UFF
 ---------
 
-  Bond:
+Bond:
 
 1. Harmonic
 
@@ -96,17 +96,17 @@ UFF
     E_R = D_{ij}[e^{-\alpha(r-r_{ij})}-1]^2
     \alpha = [\frac{k_{ij}}{2D_{ij}}]^{1/2}
 
-  Angle:
+Angle:
 
 .. math::
     E_{\theta} = \frac{K_{ijk}}{n^2}[1-\cos(n\theta)]
 
-  Torsion:
+Torsion:
 
 .. math::
     E_{\phi} = 1/2V_{\phi}[1-\cos{n\phi_0}\cos{n\phi}]
 
-  LJ:
+LJ:
 
 .. math::
     E_{vdw} = D_{ij}\{-2[\frac{\chi_{ij}}{\chi}]^6 + [\frac{\chi_{ij}}{\chi}]^{12}\}
@@ -114,7 +114,7 @@ UFF
 Dreiding
 ----------
 
-  Bond:
+Bond:
 
 1. Harmonic
 
@@ -126,24 +126,24 @@ Dreiding
 .. math::
     E = D_e[e^{-(\alpha nR-R_c)}-1]^2
 
-  Angle:
+Angle:
 
 .. math::
     E_{IJK} = K_{IJK}[1+\cos(\theta_{IJK})]
 
-  Torsion:
+Torsion:
 
 .. math::
     E_{IJKL} = 1/2V_{JK}\{1-\cos[n_{JK}(\varphi-\varphi^0_{JK})]\}
 
-  LJ:
+LJ:
   
 .. math::
     E_{vdw}^{LJ} = AR^{-12}-BR^{-6}
     or E^{LJ} = D_0[\rho^{-12}-2\rho^{-6}]
     \rho = R/R_0
 
-  LJ rules:
+LJ rules:
 
 .. math::
     D_{oij} = [D_{oii}D_{ojj}]^{1/2}
