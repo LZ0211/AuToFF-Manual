@@ -49,24 +49,21 @@ Bond:
 .. math::
     E = K_2*(R-R_0)^2
 
-\iffalse 
-
+\begin{comment}
  PCFF
- -------------------------------------------------------
-
- .. math::
-      E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
-     & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
-     & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
-     & E^t = \sum_{i=1}^4 k_i^t (1-\cos{i\phi}) \\
-     & E^0 = k^0 (\chi -\chi_0)^2 \\
-     & \{E^{bb}, E^{aa}, E^{ab}\} = k^c (s-s_0)(s'-s'_0) \\
-     & \{E^{bt}\} = (b-b_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
-     & \{E^{at}\} = (\theta-\theta_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
-     & E^{elec} = \sum_{ij} \frac{q_iq_j}{r_{ij}} \\
-     & E^{VDW} = \sum_{ij} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6]
-
-\fi
+   -------------------------------------------------------
+   .. math::
+        E = \sum E^b + \sum E^a + \sum E^0 + \sum E^t + \sum E^{bb} + \sum E^{ab} + \sum E^{aa} + \sum E^{at} + \sum E^{bt} + \sum E^{elec} + \sum E^{VDW} \\
+       & E^b = \sum_{i=2}^4 k_i^b (b-b_0)^i \\
+       & E^a = \sum_{i=2}^4 k_i^a (\theta-\theta_0)^i \\
+       & E^t = \sum_{i=1}^4 k_i^t (1-\cos{i\phi}) \\
+       & E^0 = k^0 (\chi -\chi_0)^2 \\
+       & \{E^{bb}, E^{aa}, E^{ab}\} = k^c (s-s_0)(s'-s'_0) \\
+       & \{E^{bt}\} = (b-b_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
+       & \{E^{at}\} = (\theta-\theta_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
+       & E^{elec} = \sum_{ij} \frac{q_iq_j}{r_{ij}} \\
+       & E^{VDW} = \sum_{ij} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6]
+\end{comment}
 
 CFF
 -------------------------------------------------------
@@ -181,23 +178,6 @@ PCFF
               & + \frac{1}{4\pi\epsilon_0\epsilon_r} \sum_{ij nonbonded} \frac{q_iq_j}{r_{ij}} \\
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
-\iffalse 
-
- GROMACS
- ------------
-
-   Covalent bond angles:
-
-
- .. math::
-   V(r_1,r_2,r_3) = 1/2 k_{\theta}(\theta - \theta_0)^2
-
-   Dihedral angles:
-
- .. math::
-    V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
-
-\fi
 
 CFF93
 -------
