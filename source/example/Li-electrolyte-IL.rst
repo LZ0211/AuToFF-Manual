@@ -169,6 +169,38 @@ TTE分子的pdb结构文件如下：
     :align: center
 .. centered::图3.1.7  模拟体系初始构型
 
+构建拓扑文件
+########################################################
+
+拓扑文件是gromacs运行模拟所必需的文件，它提供了模拟体系中所有分子的拓扑结构、力场文件的引用、约束力参数……；拓扑文件必须包含三个层次：
+* 参数级别；这一部分包括了力场设定
+* 分子定义级别：这一部分包含了一个或多个分子对应的.itp文件。实际上，.itp 文件可以看做是 .top 文件分子定义级别（针对每单个分子）单独拿出储存的信息，他们形成了一个嵌套式的引用关系
+* 体系级别：只包含体系的特定信息
+锂离子离子液体电解质模拟体系的top文件model.top如下：
+
+.. code-block:: 
+
+  #define _FF_OPLS
+  #define _FF_OPLSAA
+  [ defaults ]
+  1 3 yes 0.5 0.5
+  #include "Li_ATP.itp"
+  #include "FSI_ATP.itp"
+  #include "THF_ATP.itp"
+  #include "TTE_ATP.itp"
+  #include "Li.itp"
+  #include "FSI.itp"
+  #include "THF.itp"
+  #include "TTE.itp"
+  [ system ]
+  63Li+63FSI+310THF+165TTE
+  [ molecules ]
+  Li      63
+  FSI      63
+  THF      310
+  TTE      165
+
+
 MD模拟
 -------------------------------------------------------
 能量最小化
