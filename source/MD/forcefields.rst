@@ -50,6 +50,7 @@ Bond:
     E = K_2*(R-R_0)^2
 
 \iffalse 
+
  PCFF
  -------------------------------------------------------
 
@@ -64,6 +65,7 @@ Bond:
      & \{E^{at}\} = (\theta-\theta_0)\sum_{i=1}^3 k_i^c (1-\cos{i\phi}) \\
      & E^{elec} = \sum_{ij} \frac{q_iq_j}{r_{ij}} \\
      & E^{VDW} = \sum_{ij} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij})^9 - 3(\frac{r_{ij}^0}{r_{ij})^6]
+
 \fi
 
 CFF
@@ -169,7 +171,7 @@ However, Dreiding-X6:
 .. math::
     R_{oij} = [R_{oii}R_{ojj}]^{1/2}
 
-PCFF(polymer consistent force field)
+PCFF
 ----------------------------------------
 
 .. math::
@@ -180,8 +182,9 @@ PCFF(polymer consistent force field)
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
 \iffalse 
-GROMACS
-------------
+
+ GROMACS
+ ------------
 
    Covalent bond angles:
 
@@ -193,6 +196,7 @@ GROMACS
 
  .. math::
     V(r_1,r_2,r_3,r_4) = 1/2 V_0[1+\cos(n\phi - \phi_0)]
+
 \fi
 
 CFF93
