@@ -17,3 +17,11 @@
 .. include:: guide/Polymers.rst
 
 .. include:: guide/Bio.rst
+
+.. include:: guide/multi-body.rst
+
+.. include:: guide/ReaxFF.rst
+
+.. include:: guide/cg.rst
+
+.. include:: guide/qmmm.rst
