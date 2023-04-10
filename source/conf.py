@@ -89,7 +89,7 @@ pdf_documents = [
 #
 html_theme = 'sphinx_rtd_theme'
 
-html_logo = './image/AuToFF_logo.png'
+html_logo = './image/AuToFF_logo1.png'
 
 html_context = {
     "display_github": True, # Integrate GitHub
