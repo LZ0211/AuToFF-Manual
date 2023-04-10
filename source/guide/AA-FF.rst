@@ -18,7 +18,7 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
 
 根据力场选择原子类型
 -------------------------------------------------------
-目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括AM1BCC、MMFF94、RESP等。
+目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF、CVFF......，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括GNN-RESP、AM1BCC、MMFF94、XTB-RESP、XTB-CM5、XTB-1.2XCM5、qeq等。
 
 
 .. figure:: image/AA-FF-根据力场选择原子类型.png
@@ -33,6 +33,8 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
     4. CGenFF力场是CHARMM的通用力场，多了一项Urey-Bradley相互作用势，以弥补键角弯曲势的不足。
     5. 在DREIDING力场中，参与分子内或分子间相互作用的所有原子，都被按其成键的杂化类型或几何构型进行系统分类，同种类型的原子参与相互作用性质相同，不同种类型的原子参与相互作用性质不同。DREIDING力场在计算结合能和分子相互作用时的精度更高，但一些过渡金属元素相关参数存在缺失。 
     6. UFF力场比DREIDING力场有更广泛的适用范围，是对DREIDING力场的发展。
+    7. GNN-RESP电荷是基于机器学习的第一性原理精度的RESP原子电荷。
+
 
 生成拓扑文件
 -------------------------------------------------------
