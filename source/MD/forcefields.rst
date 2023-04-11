@@ -152,7 +152,7 @@ However, Dreiding-X6:
 .. math::
     R_{oij} = [R_{oii}R_{ojj}]^{1/2}
 
-PCFF :cite:`doi:10.1021/ja00086a030`
+PCFF :cite:`doi: 10.1021/ja00086a030`
 ----------------------------------------
 
 .. math::
@@ -163,7 +163,7 @@ PCFF :cite:`doi:10.1021/ja00086a030`
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
 
-CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
+CFF93 :cite:`doi:10.1002/jcc.540150207,doi: 10.1021/ja00086a030`
 ---------------------------------------------------------------------
 
 .. math::
