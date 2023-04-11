@@ -14,7 +14,7 @@
  不同的分子力场会选取不同的函数形式来描述上述能量与体系构型之间的关系。
 
 GAFF :cite:`doi:10.1002/jcc.20035` 
--------------------------------------------------------
+----
 
 .. math::
     E_{pair} = & \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{angles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1 + \cos (n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^{12}} \\
