@@ -21,7 +21,7 @@ GAFF :cite:`doi:10.1002/jcc.20035`
     & - \frac{B_{ij}}{R_{ij}^6} + \frac{q_{i}q_{j}}{\varepsilon R_{ij}}]
 
 
-AMBER :cite:`doi:org/10.1002/prot.21123`
+AMBER :cite:`doi:10.1002/prot.21123`
 -------------------------------------------------------
 
 .. math::
@@ -252,7 +252,7 @@ CHARMM
     & \sigma_{ij} = \frac{\sigma_{ii}+\sigma_{jj}}{2} \\
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
-CGenFF :cite:`doi:10.1002/jcc.21367`
+CGenFF :cite:`doi:10.1002/jcc.21367` 
 ------------------------------------------------------
 
 * Intramolecular(internal, bonded terms)
