@@ -220,7 +220,7 @@ CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
 ClayFF 
 -------------------------------------------
 
-ClayFF :cite:`doi:10.1021/jp0363287` 力场
+ClayFF :cite:`doi:10.1021/jp0363287` 力场是一种通用力场，适用于水合和多组分粘土体系及其与水溶液界面的模拟。
 
 .. math::
     & E_{total} = E_{coulombic} + E_{vdw} + E_{bond stretch} + E_{angle bend} \\
