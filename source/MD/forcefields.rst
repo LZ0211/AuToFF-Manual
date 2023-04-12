@@ -13,24 +13,30 @@
 
  不同的分子力场会选取不同的函数形式来描述上述能量与体系构型之间的关系。
 
-GAFF :cite:`doi:10.1002/jcc.20035` 
-----
+GAFF 
+--------------------------------------
+
+GAFF(Generation Amber Force Field) :cite:`doi:10.1002/jcc.20035` 力场是普适型有机小分子力场，函数形式和AMBER力场相同，与AMBER力场完全兼容。 
 
 .. math::
     E_{pair} = & \sum_{bonds} K_r(r-r_{eq})^2 + \sum_{angles} K_{\theta}(\theta -\theta_{eq})^2 + \sum_{dihedrals} \frac{V_n}{2} [1 + \cos (n\phi-\gamma)] + \sum_{i<j} [\frac{A_{ij}}{R_{ij}^{12}} \\
     & - \frac{B_{ij}}{R_{ij}^6} + \frac{q_{i}q_{j}}{\varepsilon R_{ij}}]
 
 
-AMBER :cite:`doi:10.1002/prot.21123` 
+AMBER  
 -------------------------------------------------------
+
+AMBER :cite:`doi:10.1002/prot.21123` 力场是传统力场之一，主要适用于蛋白质和核酸体系、多糖。
 
 .. math::
     E_{pot} = & \sum_{b} K_2(b-b_0)^2 + \sum_{\theta}H_{\theta}(\theta-\theta_0)^2 + \sum_{\phi} \frac{V_n}{2}[1 + \cos(n\phi-\phi_0)] \\
     & + \sum \varepsilon[(\frac{r^*}{r})^{12}-2(\frac{r^*}{r})^6] + \sum \frac{q_{i}q_{j}}{\varepsilon_{ij}r_{ij}} + \sum[\frac{C_{ij}}{r_{ij}^{12}}] + \sum[\frac{C_{ij}}{r_{ij}^{12}} - \frac{D_{ij}}{r_{ij}^{10}}]
 
 
-CVFF :cite:`doi:10.1002/prot.340040106`
+CVFF
 -------------------------------------------------------
+
+CVFF(Consistent Valence Force Field) :cite:`doi:10.1002/prot.340040106` 属传统力场。适应于有机小分子和蛋白质体系。扩展后可用于某些无机体系的模拟，如硅酸盐、铝硅酸盐、磷硅化合物等，主要用于预测分子的结构和结合自由能。
 
 .. math::
     V = & \sum {D_b[1-e^{-\alpha(b-b_0)}]^2 - D_b} + \frac{1}{2}\sum H_0(\theta-\theta_0)^2 + \frac{1}{2}\sum H_{\phi}(1+s\cos{n\phi}) + \frac{1}{2}\sum H_{\chi}\chi^2 \\
@@ -50,8 +56,11 @@ Bond:
     E = K_2*(R-R_0)^2
 
 
-OPLS :cite:`doi:10.1021/ct900009a,doi:10.1021/jp003919d,doi:10.1021/acs.jctc.9b00054`
+OPLS 
 --------------------------------------------------------------------------------------------
+OPLS(Optimized Potentials for Liquid Simulations) :cite:`doi:10.1021/ct900009a,doi:10.1021/jp003919d,doi:10.1021/acs.jctc.9b00054` 力场主要是适用于多肽、蛋白、核酸、有机溶剂等液体体系。
+
+
 .. math::
     & E_{bond} = \sum_i k_{b,i}(r_i - r_{0,i})^2 \\
     & E_{bend} = \sum_i k_{\vartheta,i}(\vartheta_i - \vartheta_{0,i})^2 \\
@@ -62,6 +71,9 @@ OPLS :cite:`doi:10.1021/ct900009a,doi:10.1021/jp003919d,doi:10.1021/acs.jctc.9b0
 
 MMFF 
 -------------------------------------------------------
+
+MMFF(Merck Molecular Force Field)是小分子力场。
+
 .. math::
     V_{total} = & \sum_{bonds} K_{bond}(r-r_{eq})^2(1+cs(r-r{eq}) + \frac{2}{7}(cs^2(r-r_{eq})^2)) \\
                 & + \sum_{angle} K_{\theta}(\theta-\theta_{eq})^2(1+cb(\theta-\theta_{eq})) + \sum_{angle,linear} K_{al}(1+\cos(\theta)) \\
@@ -69,8 +81,10 @@ MMFF
                 & + \sum_{dihedrals} \frac{V_1}{2}[1+\cos(\phi)] + \frac{V_2}{2}[1+\cos(2\phi)] + \frac{V_3}{2}[1+\cos(3\phi)] \\
                 & + \sum_{i<j} [\epsilon(\frac{1.07\sigma}{r_{ij}+0.07\sigma})^7 (\frac{1.12\sigma^7}{r_{ij}^7+0.07\sigma^7}-2) - \frac{q_iq_j}{D(r_{ij}+\delta)}]
 
-UFF :cite:`doi:10.1021/j100161a070,doi:10.1021/ja00051a040`
+UFF 
 -------------------------------------------------------------------
+
+UFF(Universall Force Field) :cite:`doi:10.1021/j100161a070,doi:10.1021/ja00051a040` 力场覆盖了周期表中所有元素，应用最为广泛。
 
 Bond:
 
@@ -100,8 +114,10 @@ LJ:
 .. math::
     E_{vdw} = D_{ij}\{-2[\frac{\chi_{ij}}{\chi}]^6 + [\frac{\chi_{ij}}{\chi}]^{12}\}
 
-Dreiding :cite:`doi:10.1021/j100389a010`
+Dreiding
 -------------------------------------------------------------
+
+Dreiding :cite:`doi:10.1021/j100389a010` 是普适型力场，但支持的元素有限，并非涵盖整个周期表。可以用于有机、生物、主族无机分子。结构、结合能的计算结果精度一般。
 
 Bond:
 
@@ -143,8 +159,10 @@ However, Dreiding-X6:
 .. math::
     R_{oij} = [R_{oii}R_{ojj}]^{1/2}
 
-PCFF :cite:`doi:10.1021/ja00086a030`
+PCFF 
 ----------------------------------------
+
+PCFF :cite:`doi:10.1021/ja00086a030` 基于CFF91，适用范围做了扩展，主要用于聚合物和有机材料，也能用于无机材料，还有糖、核酸、脂的参数。
 
 .. math::
     E_{pot} = & \sum_{ij bonded} \sum_{n=2}^4 K_{rn,ij}(r_{ij}-r_{0,ij})^n + \sum_{ijk bonded} \sum_{n=2}^4 K_{\theta n,ijk}(\theta_{ijk}-\theta_{0,ijk})^n \\
@@ -154,8 +172,10 @@ PCFF :cite:`doi:10.1021/ja00086a030`
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
 
-CFF :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J`
+CFF 
 ----------------------------------------------------------------
+
+CFF(Consistent Family of Forcefield) :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J` ：包括CFF91和CFF95。适用面很广，涵盖有机无机小分子、聚合物、多糖和生物大分子，还支持金属。
 .. math::
     E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-\theta_0)^2 + k_3(\theta-\theta_0)^3 + k_4(\theta-\theta_0)^4] \\
                 & +\sum_{\phi} [k_1(1-\cos \phi) + k_2(1-\cos2\phi) + k_3(1-\cos 3\phi)] + \sum_{\chi} k_2\chi^2 + \sum_{b,b'} k(b-b_0)(b'-b'_0) \\
@@ -165,8 +185,9 @@ CFF :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J`
                 & +\sum_{i,j} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6] 
 
 
-CFF91 :cite:`doi:10.1073/pnas.85.15.5350`
+CFF91 
 ------------------------------------------------
+CFF91 :cite:`doi:10.1073/pnas.85.15.5350` 主要用于模拟有机小分子、蛋白质以及小分子-蛋白质之间的相 互作用。
 
 .. math::
     V = & \sum_{bonds}D_b[1-e^{-\alpha(b-b_0)}]^2 = \sum_{angles}H_{\theta}(\theta-\theta_0)^2 \\
@@ -178,8 +199,10 @@ CFF91 :cite:`doi:10.1073/pnas.85.15.5350`
         & + \sum_{nonbond}\{-4\epsilon[(\frac{r^{\ast}}{r})^{12} - (\frac{r^{\ast}}{r})^{6}] + \frac{q_1q_2}{r}\}
 
 
-CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
+CFF93 
 ---------------------------------------------------------------------
+
+CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
 
 .. math::
     & E^b = \sum_{i=2}^4 k_i^b(b-b_0)^i \\
@@ -193,8 +216,10 @@ CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
     & E^{VDW} = \sum_{ij} \epsilon_{i,j} [2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6]
 
 
-ClayFF :cite:`doi:10.1021/jp0363287`
+ClayFF 
 -------------------------------------------
+
+ClayFF :cite:`doi:10.1021/jp0363287` 力场
 
 .. math::
     & E_{total} = E_{coulombic} + E_{vdw} + E_{bond stretch} + E_{angle bend} \\
@@ -245,6 +270,8 @@ GROMOS-53A5 and 53A6 :cite:`doi:10.1002/jcc.20090`
 CHARMM 
 -------------------------------------------------------------
 
+CHARMm力场(Chemistry at Harvard Macromolecular Mechanics)也是传统力场之一。适用于各种分子性质的计算和模拟。对于从孤立的小分子到溶剂化的生物大分子体系的多种模拟体系都可以给出较好的结果，但不适合于有机金属配合物。
+
 .. math::
     U(\vec{R}) = & \underbrace{\sum_{bonds}k_i^{bond}(r_i-r_0)^2}_{U_{bond}} + \underbrace{\sum_{angles}k_i^{angle}(\theta_i-\theta_0)^2}_{U_{angle}} \\
                  & + \underbrace{\sum_{dihedrals}k_i^{dihe}[1+\cos{n_i\phi_i+\delta_i}]}_{U_{dihedral}} \\
@@ -254,8 +281,10 @@ CHARMM
     & \sigma_{ij} = \frac{\sigma_{ii}+\sigma_{jj}}{2} \\
     & \epsilon_{ij} = \sqrt{\epsilon_{ii}\epsilon_{jj}}
 
-CGenFF :cite:`doi:10.1002/jcc.21367` 
+CGenFF
 ------------------------------------------------------
+
+CGenFF(CHARMM General Force Field) :cite:`doi:10.1002/jcc.21367` 用于药物类小分子，也可视为通用有机小分子力场。可结合其它CHARMM全原子力场使用。 
 
 * Intramolecular(internal, bonded terms)
 
