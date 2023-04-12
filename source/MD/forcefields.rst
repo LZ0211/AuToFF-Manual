@@ -176,6 +176,7 @@ CFF
 ----------------------------------------------------------------
 
 CFF(Consistent Family of Forcefield) :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J` ：包括CFF91和CFF95。适用面很广，涵盖有机无机小分子、聚合物、多糖和生物大分子，还支持金属。
+
 .. math::
     E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-\theta_0)^2 + k_3(\theta-\theta_0)^3 + k_4(\theta-\theta_0)^4] \\
                 & +\sum_{\phi} [k_1(1-\cos \phi) + k_2(1-\cos2\phi) + k_3(1-\cos 3\phi)] + \sum_{\chi} k_2\chi^2 + \sum_{b,b'} k(b-b_0)(b'-b'_0) \\
@@ -187,7 +188,7 @@ CFF(Consistent Family of Forcefield) :cite:`doi:10.1002/jcc.540150207,doi:10.103
 
 CFF91 
 ------------------------------------------------
-CFF91 :cite:`doi:10.1073/pnas.85.15.5350` 主要用于模拟有机小分子、蛋白质以及小分子-蛋白质之间的相 互作用。
+CFF91 :cite:`doi:10.1073/pnas.85.15.5350` 主要用于模拟有机小分子、蛋白质以及小分子-蛋白质之间的相互作用。
 
 .. math::
     V = & \sum_{bonds}D_b[1-e^{-\alpha(b-b_0)}]^2 = \sum_{angles}H_{\theta}(\theta-\theta_0)^2 \\
@@ -230,8 +231,10 @@ ClayFF :cite:`doi:10.1021/jp0363287` 力场
     & R_{o,ij} = 1/2(R_{o.i} + R_{o,j}) \\
     & D_{o,ij} = \sqrt{D_{o,i}D_{o,j}}
 
-GROMOS-53A5 and 53A6 :cite:`doi:10.1002/jcc.20090`
+GROMOS-53A5 and 53A6
 -----------------------------------------------------------------------
+
+GROMOS(Groningen Molecular Simulation) :cite:`doi:10.1002/jcc.20090` 力场是联合原子力场，用于生物分子模拟的最重要分子力场之一。
 
 * Covalent Bond Interactions
 
