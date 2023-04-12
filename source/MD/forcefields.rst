@@ -49,15 +49,6 @@ Bond:
 .. math::
     E = K_2*(R-R_0)^2
 
-CFF :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J`
-----------------------------------------------------------------
-.. math::
-    E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-\theta_0)^2 + k_3(\theta-\theta_0)^3 + k_4(\theta-\theta_0)^4] \\
-                & +\sum_{\phi} [k_1(1-\cos \phi) + k_2(1-\cos2\phi) + k_3(1-\cos 3\phi)] + \sum_{\chi} k_2\chi^2 + \sum_{b,b'} k(b-b_0)(b'-b'_0) \\
-                & +\sum_{b,\theta} k(b-b_0)(\theta-\theta_0) + \sum_{b,\phi} (b-b_0)[k_1\cos \phi + k_2\cos 2\phi + k_3\cos 3\phi] \\
-                & +\sum_{\theta,\phi} k(\theta-\theta_0)[k_1\cos \phi + k_2\cos 2\phi + k_3\cos 3\phi] + \sum_{b,\theta} k(\theta'-\theta_0')(\theta-\theta_0) \\
-                & + \sum_{\theta,\theta,\phi} k(\theta-\theta_0)(\theta'-\theta_0')\cos\phi + \sum_{i,j} \frac{q_iq_j}{r_{ij}} \\
-                & +\sum_{i,j} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6] 
 
 OPLS :cite:`doi:10.1021/ct900009a,doi:10.1021/jp003919d,doi:10.1021/acs.jctc.9b00054`
 --------------------------------------------------------------------------------------------
@@ -163,6 +154,30 @@ PCFF :cite:`doi:10.1021/ja00086a030`
               & + \sum_{ij nonbonded} \epsilon_{0,ij} (2(\frac{r_{0,ij}}{r_{ij}})^9 - 3(\frac{r_{0,ij}}{r_{ij}})^6)
 
 
+CFF :cite:`doi:10.1002/jcc.540150207,doi:10.1039/A909475J`
+----------------------------------------------------------------
+.. math::
+    E_{total} = & \sum_b [k_2(b-b_0)^2 + k_3(b-b_0)^3 + k_4(b-b_0)^4] + \sum_0 [k_2(\theta-\theta_0)^2 + k_3(\theta-\theta_0)^3 + k_4(\theta-\theta_0)^4] \\
+                & +\sum_{\phi} [k_1(1-\cos \phi) + k_2(1-\cos2\phi) + k_3(1-\cos 3\phi)] + \sum_{\chi} k_2\chi^2 + \sum_{b,b'} k(b-b_0)(b'-b'_0) \\
+                & +\sum_{b,\theta} k(b-b_0)(\theta-\theta_0) + \sum_{b,\phi} (b-b_0)[k_1\cos \phi + k_2\cos 2\phi + k_3\cos 3\phi] \\
+                & +\sum_{\theta,\phi} k(\theta-\theta_0)[k_1\cos \phi + k_2\cos 2\phi + k_3\cos 3\phi] + \sum_{b,\theta} k(\theta'-\theta_0')(\theta-\theta_0) \\
+                & + \sum_{\theta,\theta,\phi} k(\theta-\theta_0)(\theta'-\theta_0')\cos\phi + \sum_{i,j} \frac{q_iq_j}{r_{ij}} \\
+                & +\sum_{i,j} \epsilon_{ij}[2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6] 
+
+
+CFF91 :cite:`doi:10.1073/pnas.85.15.5350`
+------------------------------------------------
+
+.. math::
+    V = & \sum_{bonds}D_b[1-e^{-\alpha(b-b_0)}]^2 = \sum_{angles}H_{\theta}(\theta-\theta_0)^2 \\
+        & + \sum_{out of plane}H_{\chi}\chi^2 + \sum_{torsion}H_{\tau}(1-s\cos{n\tau}) \\
+        & + \sum_{bb'}F_{bb'}(b-b_0)(b'-b'_0) + \sum_{b\theta}F_{b\theta}(b-b_0)(\theta-\theta_0) \\
+        & + \sum_{\theta\theta'}F_{\theta\theta'}(\theta-\theta_0)(\theta'-\theta'_0) \\
+        & + \sum_{\chi\chi'}F_{\chi\chi'}\chi\chi' \\
+        & + \sum_{\tau\theta\theta'}F_{\tau\theta\theta'}\cos{\tau}(\theta-\theta_0)(\theta'-\theta'_0) \\
+        & + \sum_{nonbond}\{-4\epsilon[(\frac{r^{\ast}}{r})^{12} - (\frac{r^{\ast}}{r})^{6}] + \frac{q_1q_2}{r}\}
+
+
 CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
 ---------------------------------------------------------------------
 
@@ -177,17 +192,6 @@ CFF93 :cite:`doi:10.1002/jcc.540150207,doi:10.1021/ja00086a030`
     & E_{ec}^{el} = \sum_{ij}\frac{q_iq_j}{r_{ij}} \\
     & E^{VDW} = \sum_{ij} \epsilon_{i,j} [2(\frac{r_{ij}^0}{r_{ij}})^9 - 3(\frac{r_{ij}^0}{r_{ij}})^6]
 
-CFF91 :cite:`doi:10.1073/pnas.85.15.5350`
-------------------------------------------------
-
-.. math::
-    V = & \sum_{bonds}D_b[1-e^{-\alpha(b-b_0)}]^2 = \sum_{angles}H_{\theta}(\theta-\theta_0)^2 \\
-        & + \sum_{out of plane}H_{\chi}\chi^2 + \sum_{torsion}H_{\tau}(1-s\cos{n\tau}) \\
-        & + \sum_{bb'}F_{bb'}(b-b_0)(b'-b'_0) + \sum_{b\theta}F_{b\theta}(b-b_0)(\theta-\theta_0) \\
-        & + \sum_{\theta\theta'}F_{\theta\theta'}(\theta-\theta_0)(\theta'-\theta'_0) \\
-        & + \sum_{\chi\chi'}F_{\chi\chi'}\chi\chi' \\
-        & + \sum_{\tau\theta\theta'}F_{\tau\theta\theta'}\cos{\tau}(\theta-\theta_0)(\theta'-\theta'_0) \\
-        & + \sum_{nonbond}\{-4\epsilon[(\frac{r^{\ast}}{r})^{12} - (\frac{r^{\ast}}{r})^{6}] + \frac{q_1q_2}{r}\}
 
 ClayFF :cite:`doi:10.1021/jp0363287`
 -------------------------------------------
