@@ -22,4 +22,4 @@ AuToFF工具根据不同的力场适用条件和特定研究对象分成以下�
 
 免费使用AuToFF
 ================================================ 
-AuToFF软件是一款在线软件，有意使用AuToFF软件可直接访问 https://dev.lib-mat.ac.cn/autoff
+AuToFF软件是一款免费在线软件，有意使用AuToFF软件可直接访问 https://cloud.hzwtech.com/web/product-service?id=36
