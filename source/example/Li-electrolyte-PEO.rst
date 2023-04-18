@@ -13,13 +13,13 @@
 
 .. figure:: image/example-PEO/创建FSI结构.png
     :align: center
-.. centered::图3.2.1  创建FSI结构
+.. centered:: 图3.2.1  创建FSI结构
 
 完成分子建模后，可以支持多种结构文件类型下载，包括.pdb、.mol、.mol2、.xyz
 
 .. figure:: image/example-PEO/下载结构文件.png
     :align: center
-.. centered::图3.2.2  下载结构文件
+.. centered:: 图3.2.2  下载结构文件
 
 下载FSI分子的pdb结构文件如下：
 
@@ -50,7 +50,7 @@
 
 .. figure:: image/example-PEO/创建PEO结构.png
     :align: center
-.. centered::图3.2.3  创建PEO结构
+.. centered:: 图3.2.3  创建PEO结构
 
 
 聚合物PEO结构文件下载链接 :download:`PEO.pdb <files/PEO.pdb>`
@@ -65,7 +65,7 @@
 
 .. figure:: image/example-PEO/根据力场选择原子类型.png
     :align: center
-.. centered::图3.2.4  根据力场选择原子类型
+.. centered:: 图3.2.4  根据力场选择原子类型
 
 .. note:: 
 
@@ -78,7 +78,7 @@
 
 .. figure:: image/example-PEO/生成拓扑文件.png
     :align: center
-.. centered::图3.2.5  生成拓扑文件
+.. centered:: 图3.2.5  生成拓扑文件
 
 .. note:: 
 
@@ -117,7 +117,7 @@
 
 .. figure:: image/example-PEO/packmol建立初始模型.bmp
     :align: center
-.. centered::图3.2.6  模拟体系初始构型
+.. centered:: 图3.2.6  模拟体系初始构型
 
 构建拓扑文件
 ########################################################
@@ -295,7 +295,7 @@ MD结果分析
 
 .. figure:: image/example-PEO/模拟平衡结构快照图.png
     :align: center
-.. centered::图3.2.7  模拟平衡结构快照图
+.. centered:: 图3.2.7  模拟平衡结构快照图
 
 .. note:: 
 
@@ -316,7 +316,7 @@ MD结果分析
 
 .. figure:: image/example-PEO/RDF.png
     :align: center
-.. centered::图3.2.8  径向分布函数图
+.. centered:: 图3.2.8  径向分布函数图
 
 .. note:: 
 
@@ -329,7 +329,7 @@ MD结果分析
 
 .. figure:: image/example-PEO/MSD.png
     :align: center
-.. centered::图3.2.9  均方位移图
+.. centered:: 图3.2.9  均方位移图
 
 .. note:: 
 
