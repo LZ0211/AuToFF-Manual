@@ -14,13 +14,13 @@
 
 .. figure:: image/example-IL/创建FSI结构.png
     :align: center
-.. centered::图3.1.1  创建FSI分子结构
+.. centered:: 图3.1.1  创建FSI分子结构
 
 完成分子建模后，可以支持多种结构文件类型下载，包括.pdb、.mol、.mol2、.xyz
 
 .. figure:: image/example-IL/下载结构文件.png
     :align: center
-.. centered::图3.1.2  下载结构文件
+.. centered:: 图3.1.2  下载结构文件
 
 下载FSI分子的pdb结构文件如下：
 
@@ -371,7 +371,7 @@ MD结果分析
 
 .. figure:: image/example-IL/RDF.png
     :align: center
-.. centered::图3.1.9  径向分布函数图
+.. centered:: 图3.1.9  径向分布函数图
 
 .. note:: 
 
@@ -384,7 +384,7 @@ MD结果分析
 
 .. figure:: image/example-IL/MSD.png
     :align: center
-.. centered::图3.1.10  均方位移图
+.. centered:: 图3.1.10  均方位移图
 
 .. note:: 
 
