@@ -42,7 +42,7 @@
 
 .. figure:: image/example-IL/创建THF分子结构.png
     :align: center
-.. centered::图3.1.3  创建THF分子结构
+.. centered:: 图3.1.3  创建THF分子结构
 
 THF分子的pdb结构文件如下：
 
@@ -67,7 +67,7 @@ THF分子的pdb结构文件如下：
 
 .. figure:: image/example-IL/创建TTE分子结构.png
     :align: center
-.. centered::图3.1.4  创建TTE分子结构
+.. centered:: 图3.1.4  创建TTE分子结构
 
 TTE分子的pdb结构文件如下：
 
@@ -111,7 +111,7 @@ TTE分子的pdb结构文件如下：
 
 .. figure:: image/example-IL/根据力场选择原子类型.png
     :align: center
-.. centered::图3.1.5  根据力场选择原子类型
+.. centered:: 图3.1.5  根据力场选择原子类型
 
 .. note:: 
 
@@ -124,7 +124,7 @@ TTE分子的pdb结构文件如下：
 
 .. figure:: image/example-IL/生成拓扑文件.png
     :align: center
-.. centered::图3.1.6  生成拓扑文件
+.. centered:: 图3.1.6  生成拓扑文件
 
 .. note:: 
 
@@ -167,7 +167,7 @@ TTE分子的pdb结构文件如下：
 
 .. figure:: image/example-IL/packmol建立初始模型.bmp
     :align: center
-.. centered::图3.1.7  模拟体系初始构型
+.. centered:: 图3.1.7  模拟体系初始构型
 
 构建拓扑文件
 ########################################################
@@ -350,7 +350,7 @@ MD结果分析
 
 .. figure:: image/example-IL/模拟平衡结构快照图.bmp
     :align: center
-.. centered::图3.1.8  模拟平衡结构快照图
+.. centered:: 图3.1.8  模拟平衡结构快照图
 
 .. note:: 
 
