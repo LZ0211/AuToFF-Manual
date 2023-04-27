@@ -257,7 +257,7 @@ MD平衡过程
    compressed-x-grps  = system
    ;
    annealing = single
-   annealing_npoints = 5
+   annealing_npoints = 7
    annealing_time = 0 1000 2000 3000 4000 5000 7000
    annealing_temp = 0 500 500 400 400 298.15 298.15
    ;
