@@ -52,53 +52,54 @@ MD模拟
 -------------------------------------------------------
 
 .. code-block:: 
-   define =
-   integrator = md
-   dt         = 0.002
-   nsteps     = 1000000
-   comm-grps  = system
-   energygrps = 
-   ;
-   nstxout = 0
-   nstvout = 0
-   nstfout = 0
-   nstlog  = 500
-   nstenergy = 500
-   nstxout-compressed = 1000
-   compressed-x-grps  = system
-   ;
-   annealing = single
-   annealing_npoints = 2
-   annealing_time = 0 2000 ;ps
-   annealing_temp = 0 350
-   ;
-   pbc = xyz
-   cutoff-scheme = Verlet
-   coulombtype   = PME
-   rcoulomb      = 0.9
-   vdwtype       = cut-off
-   rvdw          = 0.9
-   DispCorr      = EnerPres
-   ;
-   Tcoupl  = V-rescale
-   tau_t   = 0.2
-   tc_grps = system
-   ref_t   = 298.15
-   ;
-   Pcoupl     = Berendsen
-   pcoupltype = isotropic
-   tau_p = 0.5
-   ref_p = 1.01325
-   compressibility = 4.5e-5
-   ;
-   gen_vel  = no
-   gen_temp = 298.15
-   gen_seed = -1
-   ;
-   freezegrps  = 
-   freezedim   = 
-   constraints = hbonds
-   
+  
+      define =
+      integrator = md
+      dt         = 0.002
+      nsteps     = 1000000
+      comm-grps  = system
+      energygrps = 
+      ;
+      nstxout = 0
+      nstvout = 0
+      nstfout = 0
+      nstlog  = 500
+      nstenergy = 500
+      nstxout-compressed = 1000
+      compressed-x-grps  = system
+      ;
+      annealing = single
+      annealing_npoints = 2
+      annealing_time = 0 2000 ;ps
+      annealing_temp = 0 350
+      ;
+      pbc = xyz
+      cutoff-scheme = Verlet
+      coulombtype   = PME
+      rcoulomb      = 0.9
+      vdwtype       = cut-off
+      rvdw          = 0.9
+      DispCorr      = EnerPres
+      ;
+      Tcoupl  = V-rescale
+      tau_t   = 0.2
+      tc_grps = system
+      ref_t   = 298.15
+      ;
+      Pcoupl     = Berendsen
+      pcoupltype = isotropic
+      tau_p = 0.5
+      ref_p = 1.01325
+      compressibility = 4.5e-5
+      ;
+      gen_vel  = no
+      gen_temp = 298.15
+      gen_seed = -1
+      ;
+      freezegrps  = 
+      freezedim   = 
+      constraints = hbonds
+
 
 MD结果分析
 -------------------------------------------------------
