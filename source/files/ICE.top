@@ -1,0 +1,13 @@
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ    fudgeQQ
+     1              2              yes            1       1
+
+#include "ICE_ATP.itp"
+#include "ICE.itp"
+
+[ system ]
+ICE
+
+[ molecules ]
+; Molecule      nmols
+ICE        1
