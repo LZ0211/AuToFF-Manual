@@ -5,3 +5,5 @@
 .. include:: example/Li-electrolyte-IL.rst
 
 .. include:: example/Li-electrolyte-PEO.rst
+
+.. include:: example/ICE-melt
