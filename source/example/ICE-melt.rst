@@ -3,7 +3,7 @@
 冰块融化的MD模拟及TIP4P/ICE水模型使用
 ================================================
 
-
+目前存在很多种水分子模型用于预测液态水的物理特性，或确定液态水的（未知）结构。AuToFF支持多种水模型，包括OPC, OPC3, SPC, SPC/E, SPC/Eb, TIP3P, TIPS3P, TIP3P-FB, TIP4P, TIP4P/Ew, TIP4P/2005, TIP4P/ICE, TIP4P/ε。其中，TIP4P/ICE是一种刚性平面的四点水模型，亦即除了一个O和2个H原子外还加入了一个虚原子M（在氧附近），虚原子仅具有负电荷，改善了水分子周围的静电分布。TIP4P/ICE是专门用来描述冰的一系列性质的水模型，对水的相图有较好的还原（1bar下冰-Ih熔点为272.2K），因此本案例将介绍利用TIP4P/ICE水模型进行冰融化的分子动力学模拟。
 
 .. figure:: image/example-ICE/TIP4P.bmp
     :align: center
