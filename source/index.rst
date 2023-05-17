@@ -16,7 +16,10 @@ AuToFF 用户手册
    User Guide
    example
    
+.. toctree::
+   :maxdepth: 3
+   :caption: 杂项
+   
    FQA
-   Cite
    References
 
