@@ -14,7 +14,7 @@
 
 选择AuToFF-联合原子力场模块，首先通过2D分子建模建立正辛醇结构简式，点击“生成3D结构视图”按钮即可3D显示，力场选择TraPPE联合原子力场。
 
-.. figure:: image/example-phase-separation/确定正辛醇结构.png
+.. figure:: image/example-phase-separation/确定正辛醇结构.PNG
     :align: center
 .. centered:: 图3.4.1  确定正辛醇结构
 
@@ -34,14 +34,14 @@
 
 根据力场的选择即可生成拓扑文件（top文件）的相关力场参数（itp文件，包括LJ、键、键角参数，原子电荷）。此外生成拓扑文件可支持多款计算软件，包括：GROMACS、LAMMPS、AMBER、Moltemplate、OpenMM、TINKER、CHARMM。
 
-.. figure:: image/example-phase-separation/生成正辛醇的力场拓扑文件.png
+.. figure:: image/example-phase-separation/生成正辛醇的力场拓扑文件.PNG
     :align: center
 .. centered:: 图3.4.3  生成正辛醇的力场拓扑文件
 
 
 同理，对于水分子的力场拓扑文件生成选择全原子力场模块，力场选择OPC3即可，其余步骤同上
 
-.. figure:: image/example-phase-separation/确定水分子的力场类型.png
+.. figure:: image/example-phase-separation/确定水分子的力场类型.PNG
     :align: center
 .. centered:: 图3.4.4  确定水分子的力场类型
 
@@ -107,7 +107,7 @@ MD模拟
 在模拟过程中，模拟步长设为２fs，积分算法选择速度Verlet算法。模拟体系的三个方向均考虑周期性，是体相的模拟。正辛醇-水混合体系的相分离过程模拟，采用梯度退火模拟。具体流程如下：等温等压系综下，模拟体系首先被缓慢加热到330 K，然后逐步将温度下降至目标温度298.15 K 。使用V-rescale控温，参考温度298.15 K, Berendsen控压， 参考压力为 1.01325 bar 。完整的GROMACS的mdp文件输入如下：
 
 .. code-block:: 
-    
+
    define =
    integrator = md-vv-avek
    
