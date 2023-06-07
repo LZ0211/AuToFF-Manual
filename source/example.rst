@@ -8,5 +8,5 @@
 
 .. include:: example/ICE-melt.rst
 
-.. include:: phase-separation.rst
+.. include:: example/phase-separation.rst
     
