@@ -53,7 +53,8 @@
 
 首先，创建模拟体系。通过Packmol软件，我们将正辛醇分子和水分子放入一个立方体的模拟盒子中。这个过程中立方体的盒子大小要略大于同等密度下混合体系所需要的体积，以保证有足够的空间使得溶剂分子能够随机的分布并且模拟可以快速平衡。将AuToFF创建并下载好每个组分的拓扑文件，然后把pdb文件拷贝到packmol文件夹，调用packmol程序生成模拟的盒子。Packmol输入文件model.inp如下：
 
-.. code-block:: 
+.. code-block::
+  
    tolerance 2.0
    filetype pdb
    add_box_sides 1.5
@@ -85,6 +86,7 @@
 正辛醇和水混合溶液模拟体系的top文件model.top如下：
 
 .. code-block:: 
+
    #define _FF_OPLS
    #define _FF_OPLSAA
    [ defaults ]
@@ -105,6 +107,7 @@ MD模拟
 在模拟过程中，模拟步长设为２fs，积分算法选择速度Verlet算法。模拟体系的三个方向均考虑周期性，是体相的模拟。正辛醇-水混合体系的相分离过程模拟，采用梯度退火模拟。具体流程如下：等温等压系综下，模拟体系首先被缓慢加热到330 K，然后逐步将温度下降至目标温度298.15 K 。使用V-rescale控温，参考温度298.15 K, Berendsen控压， 参考压力为 1.01325 bar 。完整的GROMACS的mdp文件输入如下：
 
 .. code-block:: 
+    
    define =
    integrator = md-vv-avek
    
