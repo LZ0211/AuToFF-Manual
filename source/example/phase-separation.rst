@@ -68,7 +68,7 @@
          inside cube 0. 0. 0. 80
      end structure
 
-运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了正辛醇和水混合模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的model.pdb导入到VMD显示如下
+运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了正辛醇和水混合模拟体系中所有原子的坐标和原子间的连接信息。将得到的model.pdb导入到VMD显示如下
 
 .. figure:: image/example-phase-separation/正辛醇和水混合体系初始构型.jpg
     :align: center
