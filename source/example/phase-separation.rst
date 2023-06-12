@@ -88,7 +88,7 @@
 .. code-block:: 
 
    [ defaults ]
-   1 3 yes 0.5 0.5
+   1 3 yes 0 1
    #include "Oct_ATP.itp"
    #include "h2o_ATP.itp"
    #include "Oct.itp"
