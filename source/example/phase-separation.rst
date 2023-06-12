@@ -87,8 +87,6 @@
 
 .. code-block:: 
 
-   #define _FF_OPLS
-   #define _FF_OPLSAA
    [ defaults ]
    1 3 yes 0.5 0.5
    #include "Oct_ATP.itp"
