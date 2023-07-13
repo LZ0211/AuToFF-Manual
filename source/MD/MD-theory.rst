@@ -62,7 +62,7 @@ MD模拟的统计力学基础
 .. figure:: image/dihedral.png
     :align: center
     
-* 交叉相互项：表示四个键合原子组成的反常扭转势，其中中心原子i与3个外围原子j、k和i相连。主要用来保持分子结构的平面性
+* 赝扭曲势（improper）：表示四个键合原子组成的反常扭转势，其中中心原子i与3个外围原子j、k和i相连。主要用来保持分子结构的平面性
 
 .. figure:: image/improper.png
     :align: center
