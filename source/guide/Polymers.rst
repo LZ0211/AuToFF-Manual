@@ -45,3 +45,9 @@
 .. figure:: image/2D建模.png
     :align: center
 
+.. note::
+
+ marvin网站绘制2d结构确定重复单元时一定要框选所有的原子，将所有原子包含进去，不能出现红点标记，否则将会识别读取有误
+
+.. figure:: image/marvin.png
+    :align: center
