@@ -18,7 +18,7 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
 
 根据力场选择原子类型
 -------------------------------------------------------
-目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF、CVFF......，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括1.14*CM1A、1.14xCM1A-LBCC、GNN-RESP、AM1BCC、MMFF94、XTB-RESP、CM5、1.2XCM5、QEq等。
+目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF、CVFF......，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括1.14*CM1A、1.14*CM1A-LBCC、GNN-RESP、AM1BCC、MMFF94、XTB-RESP、CM5、1.2XCM5、QEq等。
 
 若用户利用量化优化后的结构进行力场拓扑文件生成，想用该结构的键长键角参数，即可选中左下角 **使用当前结构的键长/键角** 按钮，程序将自动保留原始输入结构的键长键角参数。
 
