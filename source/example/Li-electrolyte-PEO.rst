@@ -74,7 +74,7 @@
 生成拓扑文件
 ########################################################
 
-根据力场的选择即可生成拓扑文件的相关力场参数，包括LJ、键、键角、二面角参数，原子电荷。此外生成拓扑文件可支持多款计算软件，包括：GROMACS、LAMMPS、AMBER、Moltemplate、OpenMM、TINKER、CHARMM。下载的文件夹中除了力场拓扑文件之外还包含力场参数的文献来源。
+根据力场的选择即可生成拓扑文件的相关力场参数，包括LJ、键、键角、二面角参数，原子电荷。此外生成拓扑文件可支持多款计算软件，包括：GROMACS、LAMMPS、AMBER、Moltemplate、OpenMM、TINKER、CHARMM、RASPA、NAMD、GOMC。下载的文件夹中除了力场拓扑文件之外还包含力场参数的文献来源。
 
 .. figure:: image/example-PEO/生成拓扑文件.png
     :align: center
