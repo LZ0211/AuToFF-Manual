@@ -21,5 +21,6 @@ AuToFF 用户手册
    :caption: 杂项
    
    FQA
+   cite
    References
 
