@@ -1,0 +1,72 @@
+# Created by AuToFF
+
+PF6 {
+
+  write("Data Atoms") {
+    $atom:P01      $mol:PF6      @atom:P                1.072000     0.000000     0.000000     0.000000
+    $atom:F02      $mol:PF6      @atom:FP              -0.312000     0.000000     0.000000     1.643000
+    $atom:F03      $mol:PF6      @atom:FP              -0.312000     0.000000     1.643000     0.000000
+    $atom:F04      $mol:PF6      @atom:FP              -0.312000    -1.643000     0.000000     0.000000
+    $atom:F05      $mol:PF6      @atom:FP              -0.312000     0.000000     0.000000    -1.643000
+    $atom:F06      $mol:PF6      @atom:FP              -0.312000     1.643000     0.000000     0.000000
+    $atom:F07      $mol:PF6      @atom:FP              -0.312000     0.000000    -1.643000     0.000000
+  }
+
+  write_once("Data Masses") {
+    @atom:P                 30.9740
+    @atom:FP                18.9980
+  }
+
+  write("Data Bonds") {
+    $bond:1      @bond:B1      $atom:P01      $atom:F02     
+    $bond:2      @bond:B1      $atom:P01      $atom:F03     
+    $bond:3      @bond:B1      $atom:P01      $atom:F04     
+    $bond:4      @bond:B1      $atom:P01      $atom:F05     
+    $bond:5      @bond:B1      $atom:P01      $atom:F06     
+    $bond:6      @bond:B1      $atom:P01      $atom:F07     
+  }
+
+  write("Data Angles") {
+    $angle:1      @angle:A1      $atom:F02      $atom:P01      $atom:F03     
+    $angle:2      @angle:A1      $atom:F02      $atom:P01      $atom:F04     
+    $angle:3      @angle:A2      $atom:F02      $atom:P01      $atom:F05     
+    $angle:4      @angle:A2      $atom:F02      $atom:P01      $atom:F06     
+    $angle:5      @angle:A2      $atom:F02      $atom:P01      $atom:F07     
+    $angle:6      @angle:A2      $atom:F03      $atom:P01      $atom:F04     
+    $angle:7      @angle:A2      $atom:F03      $atom:P01      $atom:F05     
+    $angle:8      @angle:A2      $atom:F03      $atom:P01      $atom:F06     
+    $angle:9      @angle:A2      $atom:F03      $atom:P01      $atom:F07     
+    $angle:10     @angle:A2      $atom:F04      $atom:P01      $atom:F05     
+    $angle:11     @angle:A2      $atom:F04      $atom:P01      $atom:F06     
+    $angle:12     @angle:A2      $atom:F04      $atom:P01      $atom:F07     
+    $angle:13     @angle:A2      $atom:F05      $atom:P01      $atom:F06     
+    $angle:14     @angle:A2      $atom:F05      $atom:P01      $atom:F07     
+    $angle:15     @angle:A2      $atom:F06      $atom:P01      $atom:F07     
+  }
+
+  write_once("In Settings") {
+    # -- Non-bonded interactions --
+    pair_coeff      @atom:P            @atom:P              0.200048   3.740000
+    pair_coeff      @atom:FP           @atom:P              0.110466   3.414922
+    pair_coeff      @atom:FP           @atom:FP             0.060999   3.118100
+
+    # -- harmonic bondType parameter  --
+    bond_coeff      @bond:B1               370.4589    1.640000
+
+    # -- harmonic angleType parameter  --
+    angle_coeff     @angle:A1              139.2208   90.000000
+    angle_coeff     @angle:A2              139.2208  180.000000
+  }
+
+  write_once("In Init") {
+    units           real
+    boundary        p p p
+    atom_style      full
+    pair_style      lj/cut/coul/long 10.0
+    pair_modify     mix geometric
+    special_bonds   lj/coul 0.0 0.0 0.5
+    kspace_style    pppm 1.0e-4
+    bond_style      harmonic
+    angle_style     harmonic
+  }
+}

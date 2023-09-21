@@ -9,4 +9,6 @@
 .. include:: example/ICE-melt.rst
 
 .. include:: example/phase-separation.rst
+
+.. include:: example/viscosity-lammps.rst
     

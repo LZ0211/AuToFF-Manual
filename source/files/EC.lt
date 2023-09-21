@@ -1,0 +1,147 @@
+# Created by AuToFF
+
+EC {
+
+  write("Data Atoms") {
+    $atom:C01      $mol:EC       @atom:c                1.168500    -0.842000     0.000000     0.000000
+    $atom:O02      $mol:EC       @atom:os              -0.449100    -0.081000    -1.106000     0.110000
+    $atom:C03      $mol:EC       @atom:c3               0.066900     1.309000    -0.752000    -0.123000
+    $atom:C04      $mol:EC       @atom:c3               0.066900     1.309000     0.752000     0.123000
+    $atom:O05      $mol:EC       @atom:os              -0.449100    -0.081000     1.106000    -0.110000
+    $atom:O06      $mol:EC       @atom:o               -0.717100    -2.042000     0.000000     0.000000
+    $atom:H07      $mol:EC       @atom:h1               0.078200     1.558000    -1.014000    -1.153000
+    $atom:H08      $mol:EC       @atom:h1               0.078200     1.930000    -1.311000     0.574000
+    $atom:H09      $mol:EC       @atom:h1               0.078200     1.930000     1.311000    -0.574000
+    $atom:H0A      $mol:EC       @atom:h1               0.078400     1.558000     1.014000     1.153000
+  }
+
+  write_once("Data Masses") {
+    @atom:c                 12.0100
+    @atom:os                16.0000
+    @atom:c3                12.0100
+    @atom:o                 16.0000
+    @atom:h1                 1.0080
+  }
+
+  write("Data Bonds") {
+    $bond:1      @bond:B1      $atom:C01      $atom:O02     
+    $bond:2      @bond:B1      $atom:C01      $atom:O05     
+    $bond:3      @bond:B2      $atom:C01      $atom:O06     
+    $bond:4      @bond:B3      $atom:O02      $atom:C03     
+    $bond:5      @bond:B4      $atom:C03      $atom:H08     
+    $bond:6      @bond:B5      $atom:C03      $atom:C04     
+    $bond:7      @bond:B5      $atom:C03      $atom:H07     
+    $bond:8      @bond:B5      $atom:C04      $atom:H09     
+    $bond:9      @bond:B5      $atom:C04      $atom:H0A     
+    $bond:10     @bond:B5      $atom:C04      $atom:O05     
+  }
+
+  write("Data Angles") {
+    $angle:1      @angle:A1      $atom:O02      $atom:C01      $atom:O05     
+    $angle:2      @angle:A2      $atom:O02      $atom:C01      $atom:O06     
+    $angle:3      @angle:A2      $atom:O05      $atom:C01      $atom:O06     
+    $angle:4      @angle:A3      $atom:C01      $atom:O02      $atom:C03     
+    $angle:5      @angle:A4      $atom:O02      $atom:C03      $atom:H08     
+    $angle:6      @angle:A5      $atom:O02      $atom:C03      $atom:C04     
+    $angle:7      @angle:A5      $atom:O02      $atom:C03      $atom:H07     
+    $angle:8      @angle:A6      $atom:C04      $atom:C03      $atom:H08     
+    $angle:9      @angle:A6      $atom:C04      $atom:C03      $atom:H07     
+    $angle:10     @angle:A7      $atom:H07      $atom:C03      $atom:H08     
+    $angle:11     @angle:A7      $atom:C03      $atom:C04      $atom:H09     
+    $angle:12     @angle:A7      $atom:C03      $atom:C04      $atom:H0A     
+    $angle:13     @angle:A7      $atom:C03      $atom:C04      $atom:O05     
+    $angle:14     @angle:A7      $atom:H09      $atom:C04      $atom:H0A     
+    $angle:15     @angle:A7      $atom:O05      $atom:C04      $atom:H09     
+    $angle:16     @angle:A7      $atom:O05      $atom:C04      $atom:H0A     
+    $angle:17     @angle:A7      $atom:C01      $atom:O05      $atom:C04     
+  }
+
+  write("Data Dihedrals") {
+    $dihedral:1      @dihedral:D1      $atom:O05      $atom:C01      $atom:O02      $atom:C03     
+    $dihedral:2      @dihedral:D1      $atom:O06      $atom:C01      $atom:O02      $atom:C03     
+    $dihedral:3      @dihedral:D1      $atom:O06      $atom:C01      $atom:O05      $atom:C04     
+    $dihedral:4      @dihedral:D3      $atom:H08      $atom:C03      $atom:O02      $atom:C01     
+    $dihedral:5      @dihedral:D4      $atom:H08      $atom:C03      $atom:C04      $atom:O05     
+    $dihedral:6      @dihedral:D5      $atom:C04      $atom:C03      $atom:O02      $atom:C01     
+    $dihedral:7      @dihedral:D3      $atom:H07      $atom:C03      $atom:O02      $atom:C01     
+    $dihedral:8      @dihedral:D4      $atom:H07      $atom:C03      $atom:C04      $atom:O05     
+    $dihedral:9      @dihedral:D5      $atom:C03      $atom:C04      $atom:O05      $atom:C01     
+    $dihedral:10     @dihedral:D4      $atom:H09      $atom:C04      $atom:C03      $atom:O02     
+    $dihedral:11     @dihedral:D8      $atom:H09      $atom:C04      $atom:C03      $atom:H08     
+    $dihedral:12     @dihedral:D8      $atom:H09      $atom:C04      $atom:C03      $atom:H07     
+    $dihedral:13     @dihedral:D3      $atom:H09      $atom:C04      $atom:O05      $atom:C01     
+    $dihedral:14     @dihedral:D4      $atom:H0A      $atom:C04      $atom:C03      $atom:O02     
+    $dihedral:15     @dihedral:D8      $atom:H0A      $atom:C04      $atom:C03      $atom:H08     
+    $dihedral:16     @dihedral:D8      $atom:H0A      $atom:C04      $atom:C03      $atom:H07     
+    $dihedral:17     @dihedral:D3      $atom:H0A      $atom:C04      $atom:O05      $atom:C01     
+    $dihedral:18     @dihedral:D9      $atom:O05      $atom:C04      $atom:C03      $atom:O02     
+    $dihedral:19     @dihedral:D2      $atom:C04      $atom:O05      $atom:C01      $atom:O02     
+  }
+
+  write("Data Impropers") {
+    $improper:1      @improper:I1      $atom:C01      $atom:O02      $atom:O05      $atom:O06     
+  }
+
+  write_once("In Settings") {
+    # -- Non-bonded interactions --
+    pair_coeff      @atom:c            @atom:c              0.098800   3.315212
+    pair_coeff      @atom:os           @atom:c              0.084693   3.235655
+    pair_coeff      @atom:os           @atom:os             0.072600   3.156098
+    pair_coeff      @atom:c3           @atom:c              0.103202   3.356461
+    pair_coeff      @atom:c3           @atom:os             0.088466   3.276904
+    pair_coeff      @atom:c3           @atom:c3             0.107800   3.397710
+    pair_coeff      @atom:o            @atom:c              0.120227   3.181666
+    pair_coeff      @atom:o            @atom:os             0.103060   3.102110
+    pair_coeff      @atom:o            @atom:c3             0.125583   3.222916
+    pair_coeff      @atom:o            @atom:o              0.146300   3.048121
+    pair_coeff      @atom:h1           @atom:c              0.045333   2.868605
+    pair_coeff      @atom:h1           @atom:os             0.038860   2.789047
+    pair_coeff      @atom:h1           @atom:c3             0.047352   2.909853
+    pair_coeff      @atom:h1           @atom:o              0.055164   2.735059
+    pair_coeff      @atom:h1           @atom:h1             0.020800   2.421997
+
+    # -- harmonic bondType parameter  --
+    bond_coeff      @bond:B1               372.9001    1.360000
+    bond_coeff      @bond:B2               652.6001    1.220000
+    bond_coeff      @bond:B3               284.8000    1.430000
+    bond_coeff      @bond:B4               375.9001    1.100000
+    bond_coeff      @bond:B5               232.5000    1.540000
+
+    # -- harmonic angleType parameter  --
+    angle_coeff     @angle:A1              115.3000  111.290000
+    angle_coeff     @angle:A2              114.8000  123.250000
+    angle_coeff     @angle:A3               66.9001  115.980000
+    angle_coeff     @angle:A4               62.4001  109.780000
+    angle_coeff     @angle:A5               85.3000  107.970000
+    angle_coeff     @angle:A6               46.9001  109.560000
+    angle_coeff     @angle:A7               38.8000  108.460000
+
+    # -- fourier dihedralType parameter  --
+    dihedral_coeff  @dihedral:D1          2    2.700048   2  180.0000    1.400096   1  180.0000
+    dihedral_coeff  @dihedral:D2          1    2.700048   2  180.0000
+    dihedral_coeff  @dihedral:D3          1    0.383365   3    0.0000
+    dihedral_coeff  @dihedral:D4          2    0.000000   3    0.0000    0.250000   1    0.0000
+    dihedral_coeff  @dihedral:D5          2    0.382887   3    0.0000    0.799952   1  180.0000
+    dihedral_coeff  @dihedral:D6          1    0.000000   3    0.0000
+    dihedral_coeff  @dihedral:D7          1    0.382887   3    0.0000
+    dihedral_coeff  @dihedral:D8          1    0.155593   3    0.0000
+    dihedral_coeff  @dihedral:D9          3    0.000000   3    0.0000    0.000000   2  180.0000    0.169933   1  180.0000
+
+    # -- cvff improperType parameter  --
+    improper_coeff  @improper:I1          10.500000          -1           2
+  }
+
+  write_once("In Init") {
+    units           real
+    boundary        p p p
+    atom_style      full
+    pair_style      lj/cut/coul/long 10.0
+    pair_modify     mix arithmetic
+    special_bonds   lj 0.0 0.0 0.5 coul 0.0 0.0 0.8333
+    kspace_style    pppm 1.0e-4
+    bond_style      harmonic
+    angle_style     harmonic
+    dihedral_style  fourier
+    improper_style  cvff
+  }
+}
