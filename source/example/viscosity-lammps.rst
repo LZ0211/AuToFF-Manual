@@ -3,7 +3,7 @@
 黏度计算-AuToFF生成LAMMPS的力场拓扑data文件
 ================================================
 
-黏度是影响电解液离子电导率的重要影响因素之一。黏度是电解液重要的基础物性，与电解液和电池的性能高度相关。能斯特–爱因斯坦方程揭示了黏度与粒子扩散的关联，表明黏度直接影响电解液中粒子的输运性质，从而影响电池的极化和倍率性能。此外，黏度会影响电解液对其他电池材料的润湿性，这也是在实际生产过程中必须考量的因素。下面利用 **Packmol** 建模获得原子坐标，继而使用 **AuToFF** 生成力场参数、电荷参数，再者 **Moltemplate** 补全拓扑信息、力场信息，并生成 **LAMMPS** 对应形式的力场拓扑data格式文件，最后采用LAMMPS进行非平衡态分子动力学方法(NEMD)方法模拟黏度性质。
+黏度是影响电解液离子电导率的重要影响因素之一。黏度是电解液重要的基础物性，与电解液和电池的性能高度相关。能斯特–爱因斯坦方程揭示了黏度与粒子扩散的关联，表明黏度直接影响电解液中粒子的输运性质，从而影响电池的极化和倍率性能。此外，黏度会影响电解液对其他电池材料的润湿性，这也是在实际生产过程中必须考量的因素。下面利用 **AuToFF** 构建组分分子，并生成力场参数、电荷参数，继而使用 **Packmol** 建模获得体系中各原子坐标，再者 **Moltemplate** 补全体系拓扑信息、力场信息，并生成 **LAMMPS** 对应形式的力场拓扑data格式文件，最后采用LAMMPS进行非平衡态分子动力学方法(NEMD)方法模拟黏度性质。
 
 
 力场辅助工具-AuToFF
@@ -24,7 +24,7 @@
 选用适当力场和模拟软件
 ########################################################
 
-选择适当的力场是进行MD模拟的基础，可以快速地获得准确的模拟结果。针对溶剂分子EC和EMC选择GAFF2力场，而 :math:`\ce{Li^+}` 离子选择CL&P力场，离子液体 :math:`\ce{{PF_6}^-}` 选择OPLS-2009IL/0.8力场即可，确定原子类型
+选择适当的力场是进行MD模拟的基础，可以快速地获得准确的模拟结果。针对溶剂分子EC和EMC选择GAFF2力场，而 :math:`\ce{Li^+}` 离子选择CL&P力场，离子液体 :math:`\ce{{PF_6}^-}` 选择OPLS-2009IL/0.8力场即可，确定原子类型。
 
 .. figure:: image/viscosity-lammps/根据力场选择原子类型.png
     :align: center
@@ -55,14 +55,14 @@
     :align: center
 .. centered:: 图5.1.4  锂离子电荷修改
 
-一键下载的moltemplate压缩包中包含 **pdb结构文件，packmol的单组份input文件，moltemplate的lt输入文件**
+一键下载的moltemplate压缩包中包含 **各组分分子的pdb结构文件，packmol的input文件，moltemplate的lt输入文件**
 
 模拟体系建模
 -------------------------------------------------------
 构建体系
 ########################################################
 
-首先，创建模拟体系。通过Packmol软件，我们将电解液组成分子放入一个立方体的模拟盒子中。这个过程中立方体的盒子大小要略大于同等密度下电解液分子所需要的体积，以保证有足够的空间使得电解液分子能够随机的分布并且模拟可以快速平衡。将AuToFF创建并下载好每个组分的拓扑文件，然后把pdb文件拷贝到packmol文件夹，调用packmol程序生成模拟的盒子。Packmol输入文件model.inp如下：
+首先，创建模拟体系。通过Packmol软件，我们将电解液组成分子放入一个立方体的模拟盒子中。这个过程中立方体的盒子大小要略大于同等密度下电解液分子所需要的体积，以保证有足够的空间使得电解液分子能够随机的分布并且模拟可以快速平衡。将上步AuToFF创建并下载好每个组分的拓扑文件，然后把pdb文件拷贝到packmol文件夹，调用packmol程序生成模拟的盒子。Packmol输入文件model.inp如下：
 
 .. code-block:: 
 
@@ -89,15 +89,15 @@
 
  
 
-运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了电解液模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的model.pdb可导入到VMD显示查看
+运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了电解液模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的 :download:`model.pdb <files/model.pdb>` 可导入到VMD显示查看。
 
 
 构建力场拓扑文件
 ########################################################
 
-力场拓扑文件是运行MD模拟所必需的文件，接下来将利用packmol生成的体系原子坐标文件，结合moltemplate补全拓扑信息、力场信息等，并生成lammps的data格式文件。其中AuToFF生成了电解液模拟体系中各个组分的moltemplate输入文件，下载链接 :download:`EC.lt <files/EC.lt>` :download:`EMC.lt <files/EMC.lt>` :download:`Li.lt <files/Li.lt>` :download:`PF6.lt <files/PF6.lt>`
+力场拓扑文件是运行MD模拟所必需的文件，接下来将利用Packmol生成的体系原子坐标文件，结合Moltemplate补全拓扑信息、力场信息等，并生成LAMMPS的data格式文件。其中前面利用 **AuToFF-生成拓扑文件** 一步中已生成了电解液模拟体系中各个组分的Moltemplate输入文件，下载链接 :download:`EC.lt <files/EC.lt>` :download:`EMC.lt <files/EMC.lt>` :download:`Li.lt <files/Li.lt>` :download:`PF6.lt <files/PF6.lt>`
 
-moltemplate输入文件system.lt如下：
+电解液体系中包含上述四个组分，moltemplate输入文件system.lt如下：
 
 .. code-block:: 
 
@@ -118,7 +118,7 @@ moltemplate输入文件system.lt如下：
 
 .. note:: 
 
-    * moltemplate输入文件system.lt中各个组分顺序需与packmol输入文件model.inp组分顺序保持一致。
+    * Moltemplate输入文件system.lt中各个组分顺序需与Packmol输入文件model.inp组分顺序保持一致。
 
 运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成电解液体系 :download:`system.data <files/system.data>` 拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>` 力场信息文件，该文件可在LAMMPS中直接使用。system.in.init文件涵盖了组分分子的力场函数类型，包括非键、键、角、二面角、赝扭曲势。
 
