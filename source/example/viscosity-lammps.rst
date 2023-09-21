@@ -16,7 +16,7 @@
 
 .. figure:: image/viscosity-lammps/创建EC分子结构.png
     :align: center
-.. centered:: 图5.1.1  创建EC分子结构
+.. centered:: 图3.5.1  创建EC分子结构
 
 同上，依次建立EMC分子、 :math:`\ce{Li^+}` 离子和 :math:`\ce{{PF_6}^-}` 阴离子。此外 :math:`\ce{Li^+}` 和 :math:`\ce{{PF_6}^-}` 离子理应在离子液体模块建立。
 
@@ -28,7 +28,7 @@
 
 .. figure:: image/viscosity-lammps/根据力场选择原子类型.png
     :align: center
-.. centered:: 图5.1.2  根据力场选择原子类型
+.. centered:: 图3.5.2  根据力场选择原子类型
 
 .. note:: 
 
@@ -42,7 +42,7 @@
 
 .. figure:: image/viscosity-lammps/生成拓扑文件.png
     :align: center
-.. centered:: 图5.1.3  生成拓扑文件
+.. centered:: 图3.5.3  生成拓扑文件
 
 .. note:: 
 
@@ -53,7 +53,7 @@
 
 .. figure:: image/viscosity-lammps/锂离子电荷修改.png
     :align: center
-.. centered:: 图5.1.4  锂离子电荷修改
+.. centered:: 图3.5.4  锂离子电荷修改
 
 一键下载的moltemplate压缩包中包含 **各组分分子的pdb结构文件，Packmol的input文件，Moltemplate的lt输入文件**
 
@@ -231,7 +231,7 @@ MD结果分析
 
 .. figure:: image/viscosity-lammps/黏度结果.png
     :align: center
-.. centered:: 图5.1.5  不同温度和剪切速率下的体系稳态粘度
+.. centered:: 图3.5.5  不同温度和剪切速率下的体系稳态粘度
 
 
 
