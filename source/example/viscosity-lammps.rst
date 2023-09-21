@@ -18,7 +18,7 @@
     :align: center
 .. centered:: 图5.1.1  创建EC分子结构
 
-同上，依次建立EMC分子、 :math:`\ce{Li^+}`离子和 :math:`\ce{{PF_6}^-}` 阴离子。此外 :math:`\ce{Li^+}` 和 :math:`\ce{{PF_6}^-}` 离子理应在离子液体模块建立。
+同上，依次建立EMC分子、 :math:`\ce{Li^+}` 离子和 :math:`\ce{{PF_6}^-}` 阴离子。此外 :math:`\ce{Li^+}` 和 :math:`\ce{{PF_6}^-}` 离子理应在离子液体模块建立。
 
 
 选用适当力场和模拟软件
