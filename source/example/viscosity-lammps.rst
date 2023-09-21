@@ -120,7 +120,7 @@ moltemplate输入文件system.lt如下：
 
     * moltemplate输入文件system.lt中各个组分顺序需与packmol输入文件model.inp组分顺序保持一致。
 
-运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成电解液体系 :download:`system.data <files/system.data>` 拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>` 力场信息文件，该文件可在LAMMPS中直接使用。
+运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成电解液体系 :download:`system.data <files/system.data>` 拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>` 力场信息文件，该文件可在LAMMPS中直接使用。system.in.init文件涵盖了组分分子的力场函数类型，包括非键、键、角、二面角、赝扭曲势。
 
 MD模拟
 -------------------------------------------------------
