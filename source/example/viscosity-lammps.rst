@@ -59,7 +59,7 @@
 
 模拟体系建模
 -------------------------------------------------------
-构建体系
+构建体系-Packmol
 ########################################################
 
 首先，创建模拟体系。通过Packmol软件，我们将电解液组成分子放入一个立方体的模拟盒子中。这个过程中立方体的盒子大小要略大于同等密度下电解液分子所需要的体积，以保证有足够的空间使得电解液分子能够随机的分布并且模拟可以快速平衡。将上步AuToFF创建并下载好每个组分的拓扑文件，然后把pdb文件拷贝到packmol文件夹，调用packmol程序生成模拟的盒子。Packmol输入文件model.inp如下：
@@ -92,7 +92,7 @@
 运行 **packmol < model.inp** 可生成model.pdb文件，该文件包含了电解液模拟体系中所有原子的坐标，但缺少键、键角等拓扑结构信息。将得到的 :download:`model.pdb <files/model.pdb>` 可导入到VMD显示查看。
 
 
-构建力场拓扑文件
+构建力场拓扑文件-Moltemplate
 ########################################################
 
 力场拓扑文件是运行MD模拟所必需的文件，接下来将利用Packmol生成的体系原子坐标文件，结合Moltemplate补全拓扑信息、力场信息等，并生成LAMMPS的data格式文件。其中前面利用 **AuToFF-生成拓扑文件** 一步中已生成了电解液模拟体系中各个组分的Moltemplate输入文件，下载链接 :download:`EC.lt <files/EC.lt>` :download:`EMC.lt <files/EMC.lt>` :download:`Li.lt <files/Li.lt>` :download:`PF6.lt <files/PF6.lt>`
@@ -122,7 +122,7 @@
 
 运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成电解液体系 :download:`system.data <files/system.data>` 拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>` 力场信息文件，该文件可在LAMMPS中直接使用。system.in.init文件涵盖了组分分子的力场函数类型，包括非键、键、角、二面角、赝扭曲势。
 
-MD模拟
+MD模拟-LAMMPS
 -------------------------------------------------------
 
 借助分子动力学软件LAMMPS，利用非平衡态分子动力学方法计算体系黏度，即在非平衡态下对体系施加剪切，计算不同剪切速率下的稳态粘度，外推至零剪切速率下得到零切粘度。LAMMPS计算参数in.msd输入文件如下：
