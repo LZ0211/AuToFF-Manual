@@ -23,3 +23,11 @@ AuToFF工具根据不同的力场适用条件和特定研究对象分成以下�
 免费使用AuToFF
 ================================================ 
 AuToFF软件是一款免费在线软件，有意使用AuToFF软件可直接访问 https://cloud.hzwtech.com/web/product-service?id=36
+
+
+引用说明
+================================================ 
+
+**使用AuToFF工具进行后续相关计算，请引用下面的参考文献**
+
+Wang, C.; Li, W.; Liao, K.; Wang, Z.; Wang, Y.; Gong, K. AuToFF Program, Vesrion 1.0. Hzwtech. Shanghai 2023, see https://cloud.hzwtech.com/web/product-service?id=36.
