@@ -38,7 +38,7 @@
 生成拓扑文件
 ########################################################
 
-根据力场的选择即可生成拓扑文件的相关力场参数，包括LJ、键、键角、二面角参数、原子电荷，此外生成拓扑文件可支持多款计算软件。接下来，我们将结合packmol和moltemplate来实现复杂体系建模，并生成lammps计算所需data力场拓扑文件。因此，选择moltemplate生成该程序的输入文件。
+根据力场的选择即可生成拓扑文件的相关力场参数，包括LJ、键、键角、二面角参数、原子电荷，此外生成拓扑文件可支持多款计算软件。接下来，我们将结合Packmol和Moltemplate来实现复杂体系建模，并生成LAMMPS计算所需data力场拓扑文件。因此，选择Moltemplate生成该程序的输入文件。
 
 .. figure:: image/viscosity-lammps/生成拓扑文件.png
     :align: center
@@ -55,7 +55,7 @@
     :align: center
 .. centered:: 图5.1.4  锂离子电荷修改
 
-一键下载的moltemplate压缩包中包含 **各组分分子的pdb结构文件，packmol的input文件，moltemplate的lt输入文件**
+一键下载的moltemplate压缩包中包含 **各组分分子的pdb结构文件，Packmol的input文件，Moltemplate的lt输入文件**
 
 模拟体系建模
 -------------------------------------------------------
