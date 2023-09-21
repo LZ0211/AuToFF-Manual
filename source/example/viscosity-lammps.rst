@@ -3,7 +3,7 @@
 黏度计算-AuToFF生成LAMMPS的力场拓扑data文件
 ================================================
 
-黏度是影响电解液离子电导率的重要影响因素之一。黏度是电解液重要的基础物性，与电解液和电池的性能高度相关。能斯特–爱因斯坦方程揭示了黏度与粒子扩散的关联，表明黏度直接影响电解液中粒子的输运性质，从而影响电池的极化和倍率性能。此外，黏度会影响电解液对其他电池材料的润湿性，这也是在实际生产过程中必须考量的因素。下面利用 **Packmol** 建模获得原子坐标，继而使用 **AuToFF** 生成力场参数、电荷参数，再者 **Moltemplate**补全拓扑信息、力场信息，并生成 **LAMMPS** 对应形式的力场拓扑data格式文件,最后采用LAMMPS进行非平衡态分子动力学方法(NEMD)方法模拟黏度性质。
+黏度是影响电解液离子电导率的重要影响因素之一。黏度是电解液重要的基础物性，与电解液和电池的性能高度相关。能斯特–爱因斯坦方程揭示了黏度与粒子扩散的关联，表明黏度直接影响电解液中粒子的输运性质，从而影响电池的极化和倍率性能。此外，黏度会影响电解液对其他电池材料的润湿性，这也是在实际生产过程中必须考量的因素。下面利用 **Packmol** 建模获得原子坐标，继而使用 **AuToFF** 生成力场参数、电荷参数，再者 **Moltemplate** 补全拓扑信息、力场信息，并生成 **LAMMPS** 对应形式的力场拓扑data格式文件,最后采用LAMMPS进行非平衡态分子动力学方法(NEMD)方法模拟黏度性质。
 
 
 力场辅助工具-AuToFF
@@ -95,7 +95,7 @@
 构建力场拓扑文件
 ########################################################
 
-力场拓扑文件是运行MD模拟所必需的文件，接下来将利用packmol生成的体系原子坐标文件，结合moltemplate补全拓扑信息、力场信息等，并生成lammps的data格式文件。其中AuToFF生成了电解液模拟体系中各个组分的moltemplate输入文件，下载链接 :download:`EC.lt <files/EC.lt>` `EMC.lt <files/EMC.lt>` `Li.lt <files/Li.lt>` `PF6.lt <files/PF6.lt>`
+力场拓扑文件是运行MD模拟所必需的文件，接下来将利用packmol生成的体系原子坐标文件，结合moltemplate补全拓扑信息、力场信息等，并生成lammps的data格式文件。其中AuToFF生成了电解液模拟体系中各个组分的moltemplate输入文件，下载链接 :download:`EC.lt <files/EC.lt>` :download:`EMC.lt <files/EMC.lt>` :download:`Li.lt <files/Li.lt>` :download:`PF6.lt <files/PF6.lt>`
 
 moltemplate输入文件system.lt如下：
 
@@ -120,7 +120,7 @@ moltemplate输入文件system.lt如下：
 
     * moltemplate输入文件system.lt中各个组分顺序需与packmol输入文件model.inp组分顺序保持一致。
 
-运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成 :download:`system.data <files/system.data>`拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>`力场信息文件，该文件可在lammps中直接使用。
+运行 **moltemplate.sh -pdb model.pdb system.lt** 即可生成 :download:`system.data <files/system.data>` 拓扑信息文件和system.in.settings :download:`system.in.settings <files/system.in.settings>` 力场信息文件，该文件可在lammps中直接使用。
 
 MD模拟
 -------------------------------------------------------
