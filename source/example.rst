@@ -12,6 +12,6 @@
 
 .. include:: example/viscosity-lammps.rst
 
-.. include:: adsorption-RASPA.rst
+.. include:: example/adsorption-RASPA.rst
 
-.. include:: RASPA-VoidFraction.rst
+.. include:: example/RASPA-VoidFraction.rst
