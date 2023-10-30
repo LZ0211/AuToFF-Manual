@@ -11,4 +11,7 @@
 .. include:: example/phase-separation.rst
 
 .. include:: example/viscosity-lammps.rst
-    
+
+.. include:: adsorption-RASPA.rst
+
+.. include:: RASPA-VoidFraction.rst
