@@ -14,7 +14,7 @@ RASPA计算孔隙率
 
 .. figure:: image/adsorption-RASPA/选择晶体文件.png
     :align: center
-.. centered:: 图3.6.1  选择ASV晶体文件
+.. centered:: 图3.7.1  选择ASV晶体文件
 
 
 根据力场选择原子类型
@@ -23,7 +23,7 @@ TraPPE-zeo是特定针对沸石骨架体系的力场。
 
 .. figure:: image/adsorption-RASPA/根据力场选择原子类型.png
     :align: center
-.. centered:: 图3.6.3  ASV晶体根据力场选择原子类型
+.. centered:: 图3.7.2  ASV晶体根据力场选择原子类型
 
 
 生成拓扑文件
@@ -32,7 +32,7 @@ TraPPE-zeo是特定针对沸石骨架体系的力场。
 
 .. figure:: image/adsorption-RASPA/生成拓扑文件.png
     :align: center
-.. centered:: 图3.6.5  生成ASV沸石分子筛晶体的拓扑文件
+.. centered:: 图3.7.3  生成ASV沸石分子筛晶体的拓扑文件
 
 
 MC模拟-RASPA
@@ -127,7 +127,6 @@ molecules.def 分子文件
 输出文件即可查看计算模拟所得ASV沸石分子筛的孔隙率，即为0.21
 
 .. code-block::
-
 
      Average Widom Rosenbluth factor:
      ================================
