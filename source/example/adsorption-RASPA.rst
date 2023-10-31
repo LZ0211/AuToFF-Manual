@@ -126,7 +126,7 @@ force_field_mxing_rules.def 力场文件
 
 .. note:: 
 
-    * 为了降低计算量，输入文件设置了RemoveAtomNumberCodeFromLabel参数，因此force_field_mxing_rules.def文件中原子类型仅需修改成Si，O
+    * 为了降低计算量，输入文件RemoveAtomNumberCodeFromLabel变量设置了yes参数，意味着在读取cif格式地Framework信息时，将元素后面的序号都删除，因此force_field_mxing_rules.def文件中原子类型仅需修改成Si，O。
 
 Framework.def 文件
 ##########################################
