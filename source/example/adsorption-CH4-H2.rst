@@ -194,7 +194,7 @@ molecules.def 分子文件
 
 .. figure:: image/adsorption-RASPA/压力对沸石ASV的ch4选择性的影响.png
     :align: center
-.. centered:: 图3.8.7  压力对沸石ASV的 :math:`\ce{CH_4}` 选择性的影响
+.. centered:: 图3.8.8  压力对沸石ASV的 :math:`\ce{CH_4}` 选择性的影响
 
 
 由此可见，在 :math:`\ce{CH_4}` / :math:`\ce{H_2}` 系统中沸石ASV对 :math:`\ce{CH_4}` 的吸附选择性几乎与体相压力的变化无关。这说明沸石的结构特征直接决定了 :math:`\ce{H_2}` 气体分子的吸附选择性。
