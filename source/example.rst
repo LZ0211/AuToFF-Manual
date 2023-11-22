@@ -16,3 +16,5 @@
 
 .. include:: example/RASPA-VoidFraction.rst
 
+.. include:: example/adsorption-CH4-H2.rst
+    
