@@ -15,23 +15,44 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
     :align: center
 .. centered:: 图1.1  创建分子结构
 
+AuToFF也内置了分子结构库（电解液分子、水分子、维生素分子、碳水化合物、酶、氨基酸分子等）。
+
+.. figure:: image/选取分子结构.png
+    :align: center
+.. centered:: 图1.2  选取分子结构
+
+用户在下拉框选择 **选取分子结构** 即可进入分子结构数据库选择常见分子。
+
+.. figure:: image/分子结构库.png
+    :align: center
+.. centered:: 图1.3  分子结构库
+
+此外，也可通过SMILES字符串解析小分子化学结构并建模。点击 **import图标** 即可进入SMILES输入框，输入SMILES字符串,继而自动生成3D分子结构
+
+.. figure:: image/SMILES图标.png
+    :align: center
+.. centered:: 图1.4  SMILES图标
+
+.. figure:: image/SMILES输入框.png
+    :align: center
+.. centered:: 图1.5  SMILES输入框
 
 根据力场选择原子类型
 -------------------------------------------------------
-目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF、CVFF......，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、TIP3P、TIP4P等。用户也可选择多种charge类型，包括1.14*CM1A、1.14*CM1A-LBCC、GNN-RESP、AM1BCC、MMFF94、XTB-RESP、CM5、1.2XCM5、QEq等。
+目前支持的全原子力场包括GAFF、GAFF2、OPLS-AA、CGenFF、CVFF......，通用力场包括UFF、DREIDING。此外，针对特定的水模型支持多种力场函数类型表示，包括OPC、OPC3、SPC、SPC/E、SPC/Eb、TIP3P、TIPS3P、TIP3P-FB、TIP4P、TIP4P/Ew、TIP4P/2005、TIP4P/ICE、TIP4P/epsilon、SPC/E-HW、TIP3P-HW、TIP4P/2005-HW。用户也可选择多种charge类型，包括普适原子电荷1.14*CM1A、1.14*CM1A-LBCC、AM1BCC、MMFF94、XTB-RESP、CM5、1.2XCM5、QEq和AI电荷GNN-RESP等。
 
 若用户利用量化优化后的结构进行力场拓扑文件生成，想用该结构的键长键角参数，即可选中左下角 **使用当前结构的键长/键角** 按钮，程序将自动保留原始输入结构的键长键角参数。
 
-此外，AuToFF可实现mSeminario方法进行力场参数拟合，用户仅需上传量化计算得到hessian文件即可进行参数拟合，hessian文件可支持BDF，gaussian，orca，XTB软件
+此外，AuToFF可实现mSeminario方法进行力场参数拟合，点击 **力场参数拟合** 按钮，用户仅需上传量化计算得到hessian文件即可进行参数拟合，hessian文件可支持BDF，gaussian，orca，XTB软件格式。
 
 
 .. figure:: image/力场参数拟合.png
     :align: center
-.. centered:: 图1.2  力场参数拟合
+.. centered:: 图1.6  力场参数拟合
 
 .. figure:: image/AA-FF-根据力场选择原子类型.png
     :align: center
-.. centered:: 图1.3  根据力场选择原子类型
+.. centered:: 图1.7  根据力场选择原子类型
 
 .. note::
 
@@ -44,16 +65,14 @@ AuToFF支持2D建模和3D分子显示，用户可以通过2D建模的方式建�
     7. GNN-RESP电荷是基于机器学习的第一性原理精度的RESP原子电荷。
 
 
-
-
 生成拓扑文件
 -------------------------------------------------------
-用户建立完分子结构，选择相应的力场，进而生成拓扑文件，也可进行力场参数的修改。最后，选择计算软件从而生成相应的输入文件，帮助用户解决力场的选择、参数的生成、复杂体系的建模等多种分子模拟过程种遇到的困难，AuToFF可以有效降低这些使用门槛，可以极大的扩大分子动力学模拟的用户群体。
+用户建立完分子结构，选择相应的力场，进而生成拓扑文件，也可进行力场参数的修改。最后，选择计算软件从而生成相应的输入文件，支持GROMACS、LAMMPS、AMBER、MOLTEMPLATE、OPENMM、TINKER、CHARMM、GEAR、RASPA、NAMD、GOMC、GAUSSIAN、ORCA软件格式输出，其中GAUSSIAN、ORCA格式为QM/MM输入参数生成，若想生成BDF软件的QM/MM输入参数生成，用户选择AMBER软件下载拓扑文件，格式即可兼容。AuToFF可以有效帮助用户解决力场的选择、参数的生成、复杂体系的建模等多种分子模拟过程种遇到的困难，AuToFF可以有效降低这些使用门槛，可以极大的扩大分子动力学模拟的用户群体。
 
 
 .. figure:: image/AA-FF-生成拓扑文件.png
     :align: center
-.. centered:: 图1.4  生成拓扑文件
+.. centered:: 图1.8  生成拓扑文件
 
 .. note::
  

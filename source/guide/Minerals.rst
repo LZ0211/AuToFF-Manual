@@ -3,12 +3,17 @@
 晶体材料
 ================================================
 
-目前本模块搭载了多种晶体结构数据库，方便用户直接导入结构模型，包括沸石、氧化物、硫化物、硫酸盐、氮化物、碳化物、碳酸盐、卤化物、氢氧化物、粘土等。此外，针对晶体材料支持的力场包括ClayFF、COMPASS、CVFF、PCFF、CFF91、Interface、Sutton-Chen、TraPPE-zeo
+晶体材料是一类周期性结构，内部原子、离子或分子在三维空间内按照一定的规律排列，具有长程有序性。目前本模块搭载了多种晶体结构数据库，方便用户直接导入结构模型，包括有机分子晶体、锑化物合金、金属互化物、沸石、陶瓷、氧化物、硫化物、硫酸盐、氮化物、碳化物、碳酸盐、卤化物、氢氧化物、粘土等。也可通过用户上传cif、vasp、gjf、car文件格式导入相应结构。此外，针对晶体材料支持的力场包括ClayFF、CVFF/harmonic、CVFF/morse、CVFF_aug/harmonic、CVFF_aug/morse、Interface/PCFF、Interface/CHARMM、FCC-Metal、Metal、TraPPE-zeo、CRYSTAL/Silica、CRYSTAL/TiO2、CRYSTAL/CaCO3、PCFF、CFF91、COMPASS。
 
 
 
 .. figure:: image/Minerals-选择晶体文件.png
     :align: center
+.. centered:: 图6.1  晶体材料模块界面
+
+.. figure:: image/Minerals-晶体材料结构库.png
+    :align: center
+.. centered:: 图6.2  晶体材料结构库
 
 .. note::
 

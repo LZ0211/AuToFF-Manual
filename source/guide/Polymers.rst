@@ -3,7 +3,7 @@
 聚合物建模
 ================================================
 
-目前本模块支持均聚物、嵌段共聚物、无规共聚物建模、2D建模，此外还提供了较为完备的聚合物单体库，方便用户建立聚合物分子。
+目前本模块支持均聚物、嵌段共聚物、无规共聚物建模、2D建模，此外还提供了较为完备的聚合物单体库，方便用户建立聚合物分子。本模块可选择的力场包括有：GAFF、GAFF2、GAFF2_mod、OPLS-AA/L、OPLS-AA/M、L-OPLS、OPLS-PFPE、OPLSR-PEO、CGenFF、Tripos、SYBYL、UFF、Dreiding、CVFF/harmonic、CVFF_aug/harmonic、CL&P、OPLS-2009IL、OPLS-2009IL/0.8、Interface/CHARMM、FCC-Metal、Metal、SMALL/EPM2、SMALL/IFF、SMALL/OH-、ClayFF。
 
 均聚物
 -------------------------------------------------------
